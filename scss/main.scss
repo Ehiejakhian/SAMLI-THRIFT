@@ -1,0 +1,466 @@
+@use './util/' as *;
+@use './components/' as *;
+@use '../font-awesome-4.7.0/scss/font-awesome.scss' as *;
+
+
+.intro {
+  margin-bottom: 100px;
+  min-height: calc(100dvh -  100px);
+  position: relative;
+  padding: 150px var(--side-padding);
+  text-align: center;
+  @include df(center, center, column-reverse, 70px);
+  
+  @media  (min-width: $tablet) {
+    text-align: left;
+    @include df(space-between, center, row, 50px);
+    >* {
+      flex: 1;
+    }
+  }
+  @media (min-width: 1100px) {
+    max-height: 100dvh;
+    &__image {
+      margin-top: -300px;
+      mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000,
+        transparent
+      );
+    }
+  }
+  
+  .intro__content {
+    position: relative;
+    @include display-flex(center, none, column, 20px);
+    >* {
+      padding: 0;
+    }
+    h1 {
+      font-family: 'smooch sans';
+      line-height: 1.2;
+      font-size: clamp(3rem, 5vw, 6rem);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+    h2 {
+      font-weight: 300;
+      line-height: 1;
+      border-bottom: 1px solid;
+      padding-bottom: 10px;
+      font-size: 1rem;
+    }
+    p {
+      font-size: 20px;
+    }
+    &__cta {
+      @include df(center, center, column, 10px);
+      &__btn {
+        width: 200px;
+        color: var(--text);
+        padding: 10px 25px;
+        text-decoration: none;
+        font-size: 18px;
+        border: 2px solid;
+        text-align: center;
+        transition: all 0.3s;
+    
+        &:hover {
+          background: var(--header-bg);
+          border: 2px solid transparent;
+          color: #fff;
+        }
+  
+      }
+    }
+    @media (min-width: $tab) {
+      @include display-flex(left, flex-start, column, 20px);
+      &__cta {
+        @include df(normal, center, column wrap, 20px);
+      }
+    }
+  }
+
+  .intro__image {
+    max-height: 100dvh;
+    position: relative;
+    @include display-flex(center, center, row wrap, 0);
+    img {
+      display: block;
+      width: 50%;
+    }
+    // .img1 {
+    //   // transform: rotate(-10deg);
+    // }
+    // .img2 {
+    //   // transform: rotate(10deg);
+    // }
+  }
+}
+
+.latest {
+  padding: 30px var(--side-padding);
+  @include df(center, center, column, 10px);
+  h2 {
+    @include h2(var(--text));
+  }
+  &__slider {
+    width: 100%;
+    @include df(normal, normal, row wrap, 20px);
+    &__each {
+      flex: 1;
+      min-width: 250px;
+      height: 700px;
+      position: relative;
+      &::after {
+        content:'';
+        z-index: 1;
+        top: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(transparent, var(--cream));
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &__content {
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        @include df(normal, normal, column, 20px);
+        h3 {
+          color: #fff;
+          font-family: 'smooch sans';
+          font-size: 40px;
+          text-transform: uppercase;
+          -webkit-text-stroke: 1px var(--text);
+
+        }
+        &__links {
+          @include df(normal, normal, column, 15px);
+          a {
+            padding: 10px 20px;
+            background: var(--bg);
+            text-decoration: none;
+            color: var(--text);
+            transition: all .3s;
+            &:hover {
+              background: rgba(#fff,.6);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.homeShop {
+  padding: 20px var(--side-padding);
+  @include df(normal, start, column, 30px);
+  h2 {
+    margin-top: 20px;
+    @include h2(var(--text), var(--bg));
+  }
+  .homeShop__slots {
+    max-width: 100%;
+    @include df(normal, normal, column, 10px);
+    .wrapper {
+      overflow-x: auto;
+      @include display-flex(none, none, row, 20px);
+      & {
+        scroll-behavior: smooth;
+        anchor-name: --carousel, --forMarkers;
+        scroll-snap-type: x mandatory;
+        scroll-snap-align: start;
+        scroll-marker-group: after;
+
+        &::scroll-marker-group {
+          @include df(center, center, row, 10px);
+          position-anchor: --forMarkers;
+          position-area: bottom center;
+          transform: translateY(20px);
+          width: 100%;
+        }
+        &::scroll-button(right), &::scroll-button(left) {
+          content:'→';
+          border: 1px solid var(--text);
+          color: var(--text);
+          background-color: var(--bg);
+          font-size: 2rem;
+          font-family: 'outfit';
+          cursor: pointer;
+          height: 50px;
+          width: 50px;
+          transition: all .3s;
+          position: fixed;
+          outline: none;
+          position-anchor: --carousel;
+          position-area: right center;
+          translate: -50%;
+          @include df(center, center);
+          &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+        }
+        &::scroll-button(left) {
+          content:'←';
+          position-area: left center;
+          translate: 50%;
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      & {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      .slot {
+        position: relative;
+        scroll-snap-align: start;
+        flex: 1;
+        min-width: 250px;
+        @include display-flex(left, none, column, 10px);
+
+        &::scroll-marker {
+          content: '';
+          height: .5rem;
+          width: .5rem;
+          background-color: #aaa;
+          border-radius: 50%;
+          cursor: pointer;
+          outline: none;
+          transition: all .3s;
+          &:target-current {
+            background-color: #ec9a01;
+            height: 1rem;
+            width: 1rem;
+          }
+        }
+  
+        .slot-image {
+          width: 100%;
+          height: 300px;
+          background: rgba(#fff, .3);
+          overflow: hidden;
+  
+          img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: inherit;
+          }
+        }
+        
+        .slot-id {
+          @include display-flex(space-between, center, row wrap, 10px);
+  
+          .slot-pieces {
+            font-size: .9rem;
+          }
+        }
+  
+        .slot-costs {
+          @include display-flex(space-between, center, row, 10px);
+  
+          .slot-price {
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: 'smooch sans';
+          }
+  
+          .get-slot {
+            @include button(#fff, var(--header-bg));
+            & {
+              border: 1px solid var(--header-bg);
+              padding: 5px 10px;
+            }
+            &:hover {
+              color: var(--bg);
+              background: var(--text);
+              border: 1px solid var(--text);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__seeMoreBtn {
+    margin-top: 20px;
+    @include button(var(--text), var(--bg));
+  }
+}
+
+.about {
+  margin-top: 50px;
+  background: linear-gradient(var(--header-bg), transparent);
+  padding: 50px var(--side-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  place-items: center;
+  position: relative;
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+  }
+  &__content {
+    text-align: center;
+    @include df(normal, normal, column, 20px);
+    h2 {
+      @include h2(#fff, var(--header-bg));
+      & {
+        margin: 0 auto;
+      }
+    }
+    p {
+      margin: 15px 0;
+      &:last-of-type {
+        padding-bottom: 50px;
+      }
+    }
+  }
+  article {
+    padding: 50px var(--side-padding);
+    background-color: var(--cream);
+    color: var(--text);
+    font-size: 2rem;
+    width: 100%;
+    @include df(normal, normal, row, 10px);
+    i:last-of-type {
+      align-self: flex-end;
+    }
+  }
+}
+
+.trust {
+  text-align: center;
+  min-height: 70dvh;
+  padding: 50px var(--side-padding);
+  @include df(center, center, column, 20px);
+  h2 {
+    @include h2(var(--text), var(--cream));
+  }
+  .slider {
+    max-width: 100%;
+    border: 1px solid;
+    overflow-x: auto;
+    mask-image: linear-gradient(
+      to right,
+      transparent, black, transparent
+    );
+    @include df(normal, center, row, 0);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__proofs {
+    padding-right: 30px;
+    height: 400px;
+    animation: spin 30s infinite linear; 
+    @include df(center, center, row, 30px);
+    &:hover {
+      animation-play-state: paused;
+    }
+    &__each {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      @include df(center, center, column, 20px);
+      img {
+        display: block;
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid;
+      }
+      &__id {
+        @include df(center, center, column, 5px);
+        &__location {
+          font-family: 'smooch sans';
+          font-weight: bold;
+          position: relative;
+          padding: 0 5px;
+          background: var(--bg);
+          @include df(center, center);
+          &::after {
+            content:'';
+            position: absolute;
+            border: 1px solid var(--header-bg);
+            width: calc(100% + 60px);
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.choose {
+  min-height: 100dvh;
+  padding: 50px var(--side-padding);
+  @include df(center, center, column, 20px);
+  h2 {
+    @include h2(var(--text), var(--cream));
+  }
+  ul {
+    @include df(center, center, column, 30px);
+    li {
+      text-transform: uppercase;
+      font-size: clamp(2rem, 5dvw, 4rem);
+      list-style: none;
+      text-align: center;
+      animation: appear 5s linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  }
+}
+.cta {
+  font-family:'smooch sans';
+  font-size: 25px;
+  background: var(--cream);
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto -40px auto;
+  position: relative;
+  z-index: 13;
+  @media (max-width: $mobile) {
+    padding: 20px var(--side-padding);
+  }
+  @include df(center, center, column, 20px);
+  &__links {
+    @include df(normal, start, row, 10px);
+    @media (max-width: $mobile) {
+      @include df(normal, start, row wrap, 10px);
+    }
+    a {
+      color: var(--text);
+      padding: 10px 20px;
+      text-decoration: none;
+      border: 1px solid;
+      text-align: center;
+      transition: all 0.3s;
+  
+      &:hover {
+        background: var(--header-bg);
+        border: 1px solid transparent;
+        color: #fff;
+      }
+    }
+  }
+}

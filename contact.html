@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Samli Thrift Collections</title>
+  <link rel="stylesheet" href="./scss/css/main.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="header__content">
+    <button id="toggleLang">
+      <i class="fa fa-language"></i>
+    </button>
+    <h2 class="logo">Samli Thrift</h2>
+    <input type="checkbox" class="nav__checkbox" id="nav__checkbox"/>
+    <label for="nav__checkbox" class="nav__menu__open">
+      <span></span><span></span><span></span>
+    </label>
+    <label for="nav__checkbox" class="overlay"></label>
+    <nav class="mobile__nav">
+      <label for="nav__checkbox" class="nav__menu__close">
+        <span></span><span></span>
+      </label>
+      <ul>
+        <li><a href="./store.html">
+          <i class="fa fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a></li>
+        <li><a href="./contact.html">
+          <i class="fa fa-commenting"></i>
+          <span>Contact</span>
+        </a></li>
+        <li><a href="./cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <span>Cart</span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <!-- Bottom and absolute positioned Items -->
+    <nav class="tab__nav">
+      <ul>
+        <li><a href="./index.html">
+          <i class="fa fa-home"></i>
+          <!-- <span>Home</span> -->
+        </a></li>
+        <li><a href="./store.html">
+          <i class="fa fa-shopping-bag"></i>
+          <!-- <span>Shop</span> -->
+        </a></li>
+        <li><a href="./cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <!-- <span>Cart</span> -->
+        </a></li>
+        <li><a href="./cart.html">
+          <i class="fa fa-commenting"></i>
+          <!-- <span>Cart</span> -->
+        </a></li>
+      </ul>
+    </nav>
+    <!-- <div class="floating__button">
+      <a href="tel:08142340182" class="floating__button__call">
+        <i class="fa fa-phone"></i>
+      </a>
+      <a href="" class="floating__button__chat">
+        <i class="fa fa-whatsapp"></i>
+      </a>
+    </div> -->
+    <!-- CONTINUE HERE -->
+  </div>
+</header>
+
+  <main>
+    <section class="contact">
+      <div class="contact__content">
+        <h1>Contact Us</h1>
+        <p>Please feel free to reach us via email, phone or whatsapp.</p>
+        <input type="radio" name="contact__type" id="contact__type__phone">
+        <input type="radio" name="contact__type" id="contact__type__email">
+        <input type="radio" name="contact__type" id="contact__type__whatsapp">
+        <div class="contact__type__selection">
+          <label for="contact__type__phone"><i class="fa fa-phone"></i></label><label for="contact__type__email" class="selected"><i class="fa fa-envelope-o"></i></label><label for="contact__type__whatsapp"><i class="fa fa-whatsapp"></i></label>
+        </div>
+        <form class="contact__content__form">
+          <div class="contact__content__form__name">
+            <fieldset class="entry__area">
+              <input type="text" name="name" id="name" class="correct" placeholder="John Doe"/>
+              <legend for="name">Your Name</legend>
+            </fieldset>
+            <span class="error-message__name">A valid name please</span>
+          </div>
+          <div class="contact__content__form__email">
+            <fieldset class="entry__area">
+              <input type="email" name="email" id="email" placeholder="yourEmail@example.com"/>
+              <legend for="email">Your Email</legend>
+            </fieldset>
+            <span class="error-message__email">This email is not valid</span>
+          </div>
+          <div class="contact__content__form__number">
+            <fieldset class="entry__area">
+              <input type="tel" name="number" id="number" pattern="(^(((\+?234|234)[0-9]{10})|(0[0-9]{10}))$)" placeholder="0800 000 0000"/>
+              <legend for="number">Phone Number</legend>
+            </fieldset>
+            <span class="error-message__phone">This number is not valid</span>
+          </div>
+          <div class="contact__content__form__message">
+            <fieldset class="entry__area">
+              <textarea name="message" id="message" rows="5" placeholder="Hello LUVTOP! ...."></textarea>
+              <legend for="message">Your Message</legend>
+            </fieldset>
+            <span class="error-message__message">A valid message please</span>
+          </div>
+          <input type="submit" value="Submit" class="contact__content__form__submit">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <p>&copy; 2024 Samli Thrift Collections. All rights reserved.</p>
+
+  <div class="toggle-theme">
+    <input type="checkbox" name="theme" id="theme-checkbox">
+    <label for="theme-checkbox"><i class="fa fa-adjust"></i></label>
+  </div>
+</footer>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/contact__form.js" defer></script>
+  <script src="./scripts/theme.js" defer></script>
+
+</body>
+</html>

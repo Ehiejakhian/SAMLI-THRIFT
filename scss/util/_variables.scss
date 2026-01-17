@@ -1,0 +1,23 @@
+
+$mobile: 550px;
+$tablet: 768px;
+$desktop: 1200px;
+$tab: 768px;
+$mini-tab: 500px;
+
+:root {
+  --text: #121212;
+  --bg:  #fff;
+  --cream: #f5f5dc;
+  --header-text: #dbf1f1;//
+  --header-text-hover: #f79e4b;//
+  --header-bg: #1f7679;
+  --header-nav-bg:#125b5e;//
+  
+  --input-focus-color: green;
+  --error: crimson;
+
+  --side-padding: clamp(20px, 10dvw, 10dvw);
+  --btn-hover-bg: rgba(#ccc, .3);
+}
+

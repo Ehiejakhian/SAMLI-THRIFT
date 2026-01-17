@@ -1,0 +1,247 @@
+@use '../util/' as *;
+
+header {
+  background: var(--header-bg);
+  padding: 20px var(--side-padding);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  .header__content {
+    color: var(--header-text);
+    @include df(space-between, center, row, 10px);
+    h2 {
+      font-size: 1.5rem;
+    }
+    .overlay,.nav__checkbox {
+      display: none;
+    }
+    #toggleLang {
+      outline: none;
+      font-size: 30px;
+      background: transparent;
+      border: 2px solid;
+      color: inherit;
+      font-weight: bold;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      transition: all .3s;
+      &:hover {
+        background: rgba(#ccc, .3);
+      }
+    }
+    .nav__menu {
+      &__open {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        @include df(center, center, column, 5px);
+        &:hover {
+          background-color: rgba(#ccc, .3);
+        }
+        span {
+          width: 25px;
+          height: 4px;
+          background: var(--header-text);
+          border-radius: 5px;
+        }
+      }
+      &__close {
+        // border: 2px solid;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: relative;
+        transition: all .3s;
+        @include df(center, center, column);
+        &:hover {
+          background: rgba(#ccc, .3);
+        }
+        span {
+          width: 30px;
+          height: 4px;
+          background: var(--header-text);
+          border-radius: 5px;
+          position: absolute;
+          transform: rotate(45deg);
+          &:last-of-type {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    .mobile__nav {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      padding: 20px var(--side-padding);
+      background: var(--header-nav-bg);
+      width: 70dvw;
+      transition: all .75s;
+      @include df(normal, normal, column, 20px);
+      // >* {
+      //   border: 1px solid;
+      // }
+      .nav__menu__close {
+        align-self: flex-end;
+      }
+      ul {
+        li {
+          list-style: none;
+          a {
+            font-weight: bold;
+            text-decoration: none;
+            color: inherit;
+            padding: 20px 0;
+            transition: all .3s;
+            @include df(normal, center, row, 10px);
+            &:hover {
+              color: var(--header-text-hover);
+            }
+          }
+          &:not(:last-of-type) {
+            border-bottom: 1px solid;
+          }
+        }
+      }
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 9;
+      background-color: rgba(black,.5);
+    }
+    .nav__checkbox:checked ~ .overlay {
+      display: block;
+    }
+    .nav__checkbox:checked ~ .mobile__nav {
+      right: 0;
+    }
+
+
+    .tab__nav {
+      position: fixed;
+      z-index: 5;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      min-height: 80px;
+      background: var(--header-bg);
+      @include df(center, center);
+      ul {
+        width: 100%;
+        height: 70px;
+        @include df(space-between, center, row, 0);
+        li {
+          height: 100%;
+          flex: 1;
+          list-style: none;
+          a {
+            color: var(--header-text);
+            padding: 15px;
+            text-decoration: none;
+            transition: all .3s;
+            @include df(center, center, column, 10px);
+            &:hover {
+              color: var(--header-text-hover);
+            }
+            i {
+              font-size: 20px;
+            }
+            span {
+              font-size: 13px;
+            }
+          }
+          &:not(:last-of-type) {
+            border-right: 1px solid;
+          }
+        }
+      }
+    }
+    .floating__button {
+      position: fixed;
+      z-index: 5;
+      bottom: 100px;
+      right: var(--side-padding);
+      height: 50px;
+      width: 50px;
+      // overflow-x: ;
+      @include df(center, center);
+      >* {
+        position: absolute;
+        border-radius: 50%;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        text-decoration: none;
+        @include df(center, center);
+        i {
+          font-size: 30px;
+        }
+      }
+      &__call {
+        background-color: var(--header-bg);
+      }
+      &__chat {
+        background-color: #02e702;
+      }
+    }
+    @media (min-width: $tab) {
+      display: grid;
+      grid-template-columns: 300px 1fr 50px 50px;
+      grid-template-areas: 
+      "t n l p"
+      ;
+      .tab__nav {
+        display: none;
+      }
+      .nav__menu {
+        &__open {
+          display: none;
+        }
+        &__close {
+          display: none;
+        }
+      }
+      .mobile__nav {
+        align-items: end;
+        grid-column: n;
+        width: auto;
+        padding: 0;
+        position: relative;
+        right: 0;
+        background: transparent;
+        ul {
+          @include df(center, center, row, 20px);
+          li {
+            border: none !important;
+            a {
+              padding: 0;
+            }
+          }
+        }
+      }
+      .logo {
+        grid-area: t;
+      }
+      #toggleLang {
+        grid-area: l;
+      }
+      .floating__button {
+        grid-area: p;
+        position: static;
+        z-index: 12;
+      }
+    }
+  }
+}

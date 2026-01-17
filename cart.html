@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samli Thrift Collections - Where Quality Meets Affordability. Discover affordable, quality thrift clothing for men, women, and children in Nigeria. Shop now and find your next favorite outfit!">
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Samli Thrift Collections" />
+  <meta property="og:description" content="Where Quality Meets Affordability. Discover affordable, quality thrift clothing for men, women, and children in Nigeria." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+  <title>Samli Thrift Collections</title>
+  <link rel="stylesheet" href="./scss/css/main.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="header__content">
+    <button id="toggleLang">
+      <i class="fa fa-language"></i>
+    </button>
+    <h2 class="logo">Samli Thrift</h2>
+    <input type="checkbox" class="nav__checkbox" id="nav__checkbox"/>
+    <label for="nav__checkbox" class="nav__menu__open">
+      <span></span><span></span><span></span>
+    </label>
+    <label for="nav__checkbox" class="overlay"></label>
+    <nav class="mobile__nav">
+      <label for="nav__checkbox" class="nav__menu__close">
+        <span></span><span></span>
+      </label>
+      <ul>
+        <li><a href="./store.html">
+          <i class="fa fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a></li>
+        <li><a href="./contact.html">
+          <i class="fa fa-commenting"></i>
+          <span>Contact</span>
+        </a></li>
+        <li><a href="./cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <span>Cart</span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <!-- Bottom and absolute positioned Items -->
+    <nav class="tab__nav">
+      <ul>
+        <li><a href="./index.html">
+          <i class="fa fa-home"></i>
+          <!-- <span>Home</span> -->
+        </a></li>
+        <li><a href="./store.html">
+          <i class="fa fa-shopping-bag"></i>
+          <!-- <span>Shop</span> -->
+        </a></li>
+        <li><a href="./cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <!-- <span>Cart</span> -->
+        </a></li>
+        <li><a href="./cart.html">
+          <i class="fa fa-commenting"></i>
+          <!-- <span>Cart</span> -->
+        </a></li>
+      </ul>
+    </nav>
+    <div class="floating__button">
+      <a href="tel:08142340182" class="floating__button__call">
+        <i class="fa fa-phone"></i>
+      </a>
+      <a href="" class="floating__button__chat">
+        <i class="fa fa-whatsapp"></i>
+      </a>
+    </div>
+    <!-- CONTINUE HERE -->
+  </div>
+</header>
+
+  <div id="toast" class="toast">
+    <span id="toast-message">Slot removed from cart 🛒</span>
+    <button id="undo-button">Undo</button>
+  </div>
+
+
+  <main>
+    <h1>Cart</h1>
+    <h2>Your Selected Slots</h2>
+    <div id="cart"></div>
+    <button id="clear-cart">Clear Cart</button>
+  </main>
+
+
+  <footer>
+  <p>&copy; 2024 Samli Thrift Collections. All rights reserved.</p>
+
+  <div class="toggle-theme">
+    <input type="checkbox" name="theme" id="theme-checkbox">
+    <label for="theme-checkbox"><i class="fa fa-adjust"></i></label>
+  </div>
+</footer>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/cart.js"></script>
+  <script src="./scripts/theme.js" defer></script>
+</body>
+</html>

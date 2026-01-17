@@ -1,0 +1,93 @@
+@use './variables' as *;
+
+@mixin display-flex($justiy, $align, $flow, $gap) {
+  display: flex;
+  justify-content: $justiy;
+  align-items: $align;
+  flex-flow: $flow;
+  gap: $gap;
+}
+
+@mixin df($j:normal, $a:normal, $f:row, $g:0) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  flex-flow: $f;
+  gap: $g;
+}
+
+@mixin display-grid($num-cols, $min,  $max, $gap) {
+  display: grid;
+  grid-template-columns: repeat($num-cols,  minmax($min, $max));
+  gap: $gap;
+}
+
+@mixin h2($color:#fff, $bg:transparent) {
+  max-width: $mobile;
+  font-family: 'smooch sans';
+  color: $color;
+  background-color: $bg;
+  padding: 10px 20px;
+  border: 2px solid;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @include df(center, center);
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    // border-right: 1px solid;
+    // border-bottom: 1px solid;
+    width: 100%;
+    height: 100%;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(#ccc,.3);
+  }
+}
+
+@mixin button($c:#000, $bg:#fff, $font:inherit) {
+  font-size: $font;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 10px 20px;
+  text-align: center;
+  color: $c;
+  background: $bg;
+  transition: all .3s;
+  &:hover {
+    color: var(--bg);
+    background: var(--header-bg);
+    border-color: var(--header-bg);
+  }
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+@keyframes stack {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: .5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
