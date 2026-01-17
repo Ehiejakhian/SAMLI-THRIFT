@@ -310,12 +310,21 @@
   gap: 25px;
   place-items: center;
   position: relative;
+  width: 100%;
+  @media (max-width: $mobile) {
+    @include df(center, center, column, 25px);
+  }
 
   &__img {
     display: block;
     width: 100%;
     max-width: 400px;
     align-self: center;
+    mask-image: linear-gradient(
+      to bottom,
+      #000 90%,
+      transparent
+    );
   }
   &__content {
     text-align: center;

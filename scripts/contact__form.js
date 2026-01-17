@@ -9,7 +9,6 @@ let nameDiv = elin.parentNode.parentNode;
 let emailDiv = email.parentNode.parentNode;
 let phoneDiv = phone.parentNode.parentNode;
 let messageDiv = message.parentNode.parentNode;
-console.log(nameDiv);
 
 let error__name = document.querySelector('.error-message__name');
 let error__email = document.querySelector('.error-message__email')

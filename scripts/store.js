@@ -10,7 +10,7 @@ document.querySelectorAll('.get-slot').forEach(button => {
     const name = slotElement.querySelector('.slot-name').textContent.trim();
     const pieces = slotElement.querySelector('.slot-pieces').textContent.trim();
     const price = slotElement.querySelector('.slot-price').textContent.trim();
-    const image = slotElement.querySelector('.slot-image').style.backgroundImage;
+    const image = slotElement.querySelector('.slot-image>img').src;
 
     // Create slot object
     const slotData = {

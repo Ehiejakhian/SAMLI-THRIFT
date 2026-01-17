@@ -222,7 +222,7 @@ header {
         right: 0;
         background: transparent;
         ul {
-          @include df(center, center, row, 20px);
+          @include df(center, center, row, clamp(20px, 10dvw, 50px));
           li {
             border: none !important;
             a {

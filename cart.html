@@ -17,7 +17,7 @@
 <body>
   <header class="header">
   <div class="header__content">
-    <button id="toggleLang">
+    <button id="toggleLang" title="pidgin">
       <i class="fa fa-language"></i>
     </button>
     <h2 class="logo">Samli Thrift</h2>
@@ -31,6 +31,10 @@
         <span></span><span></span>
       </label>
       <ul>
+        <li><a href="./index.html">
+          <i class="fa fa-home"></i>
+          <span>Home</span>
+        </a></li>
         <li><a href="./store.html">
           <i class="fa fa-shopping-bag"></i>
           <span>Shop</span>
@@ -38,10 +42,6 @@
         <li><a href="./contact.html">
           <i class="fa fa-commenting"></i>
           <span>Contact</span>
-        </a></li>
-        <li><a href="./cart.html">
-          <i class="fa fa-shopping-cart"></i>
-          <span>Cart</span>
         </a></li>
       </ul>
     </nav>
@@ -51,19 +51,19 @@
       <ul>
         <li><a href="./index.html">
           <i class="fa fa-home"></i>
-          <!-- <span>Home</span> -->
+          <span>Home</span>
         </a></li>
         <li><a href="./store.html">
           <i class="fa fa-shopping-bag"></i>
-          <!-- <span>Shop</span> -->
+          <span>Shop</span>
         </a></li>
         <li><a href="./cart.html">
           <i class="fa fa-shopping-cart"></i>
-          <!-- <span>Cart</span> -->
+          <span>Cart</span>
         </a></li>
         <li><a href="./cart.html">
           <i class="fa fa-commenting"></i>
-          <!-- <span>Cart</span> -->
+          <span>Contact</span>
         </a></li>
       </ul>
     </nav>
@@ -86,15 +86,37 @@
 
 
   <main>
-    <h1>Cart</h1>
-    <h2>Your Selected Slots</h2>
-    <div id="cart"></div>
-    <button id="clear-cart">Clear Cart</button>
+    <section class="wholeCart">
+      <h1
+        data-en="Your Cart"
+        data-pg="Your Goods">Your Cart
+      </h1>
+      <h2
+        data-en="Your Selected Slots"
+        data-pg="Slots wey you don select">Your Selected Slots</h2>
+      <div id="cart">
+        
+      </div>
+      <button 
+        class="wholeCart__placeBtn">Place Order</button>
+      <button id="clear-cart" class="wholeCart__clearBtn">Clear Cart</button>
+
+    </section>
   </main>
 
 
   <footer>
-  <p>&copy; 2024 Samli Thrift Collections. All rights reserved.</p>
+  <div class="credentials">
+    <ul>
+      <li><i class="fa fa-paper-plane"></i></li>
+      <li>After Suprme hotel,<br> Nepa Line,<br> Off Ukhun Road, Ekpoma, Edo State.</li>
+    </ul>
+    <ul>
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
+  <p class="copy">&copy; 2024 Samli Thrift Collections. All rights reserved.</p>
 
   <div class="toggle-theme">
     <input type="checkbox" name="theme" id="theme-checkbox">
@@ -104,5 +126,33 @@
   <script src="./scripts/main.js"></script>
   <script src="./scripts/cart.js"></script>
   <script src="./scripts/theme.js" defer></script>
+  <script type="module" src="./scripts/lang.js"></script>
 </body>
 </html>
+
+
+<!-- <div class="cart-item">
+        <button class="remove-item" data-index="0">×</button>
+        <div class="cart-image" style="background-image: ;"></div>
+        <div class="cart-details">
+          <h4>Men Formal Sleves</h4>
+          <p>30 pieces</p>
+          <p>₦20, 000</p>
+        </div>
+      </div><div class="cart-item">
+        <button class="remove-item" data-index="1">×</button>
+        <div class="cart-image" style="background-image: ;"></div>
+        <div class="cart-details">
+          <h4>Female Gowns</h4>
+          <p>100 pieces</p>
+          <p>₦70, 000</p>
+        </div>
+      </div><div class="cart-item">
+        <button class="remove-item" data-index="2">×</button>
+        <div class="cart-image" style="background-image: ;"></div>
+        <div class="cart-details">
+          <h4>Kids Tops</h4>
+          <p>200 pieces</p>
+          <p>₦100, 000</p>
+        </div>
+      </div> -->
