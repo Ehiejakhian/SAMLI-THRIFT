@@ -763,6 +763,9 @@ footer .toggle-theme #theme-checkbox {
 }
 .contact__content__form {
   width: 100%;
+  display:none;
+}
+.contact__content__form.selected {
   display: flex;
   justify-content: normal;
   align-items: normal;

@@ -57,10 +57,19 @@
     }
     &__form {
       width: 100%;
-      border: 2px solid red;
-      // display: none;
+      border: 2px solid red; 
+      display: none;
       &.selected {
         @include df(normal, normal, column, 20px);
+      }
+      &:first-of-type {
+        a {
+          @include button(var(--text), var(--cream));
+          & {
+            align-self: center;
+            @include df(center, center, row, 10px);
+          }
+        }
       }
 
       > div {

@@ -1,24 +1,24 @@
 
-let hamburger = document.querySelector('.hamburger-menu');
-let ul = document.querySelector('.nav-links');
+// let hamburger = document.querySelector('.hamburger-menu');
+// let ul = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', checkHamburgerState);
+// hamburger.addEventListener('click', checkHamburgerState);
 
-let hamburgerOpen = false
-function checkHamburgerState() {
-  if (hamburgerOpen) {
-    ul.classList.remove('open')
-    hamburger.classList.remove('open')
+// let hamburgerOpen = false
+// function checkHamburgerState() {
+//   if (hamburgerOpen) {
+//     ul.classList.remove('open')
+//     hamburger.classList.remove('open')
 
-    hamburgerOpen = false
-  }else {
-    ul.classList.add('open')
-    hamburger.classList.add('open')
+//     hamburgerOpen = false
+//   }else {
+//     ul.classList.add('open')
+//     hamburger.classList.add('open')
 
-    hamburgerOpen = true
-  }
-  return hamburgerOpen
-}
+//     hamburgerOpen = true
+//   }
+//   return hamburgerOpen
+// }
 
 //-----//Time and greeting//------//
 /*

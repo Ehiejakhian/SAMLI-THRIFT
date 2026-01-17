@@ -83,31 +83,13 @@
         <div class="contact__type__selection">
           <label for="contact__type__phone"><i class="fa fa-phone"></i></label><label for="contact__type__email" class="selected"><i class="fa fa-envelope-o"></i></label><label for="contact__type__whatsapp"><i class="fa fa-whatsapp"></i></label>
         </div>
-        <form class="contact__content__form phoneContact">
-          <div class="contact__content__form__name">
-            <fieldset class="entry__area">
-              <input type="text" name="name" id="name" class="correct" placeholder="John Doe"/>
-              <legend for="name">Your Name</legend>
-            </fieldset>
-            <span class="error-message__name">A valid name please</span>
-          </div>
-          <div class="contact__content__form__number">
-            <fieldset class="entry__area">
-              <input type="tel" name="number" id="number" pattern="(^(((\+?234|234)[0-9]{10})|(0[0-9]{10}))$)" placeholder="0800 000 0000"/>
-              <legend for="number">Phone Number</legend>
-            </fieldset>
-            <span class="error-message__phone">This number is not valid</span>
-          </div>
-          <div class="contact__content__form__message">
-            <fieldset class="entry__area">
-              <textarea name="message" id="message" rows="5" placeholder="Hello LUVTOP! ...."></textarea>
-              <legend for="message">Your Message</legend>
-            </fieldset>
-            <span class="error-message__message">A valid message please</span>
-          </div>
-          <input type="submit" value="Submit" class="contact__content__form__submit">
+        <form class="contact__content__form">
+          <p>Reach out to us Directly<br>
+            <b>Phone:</b><br>08038849000
+          </p>
+          <a href="tel:08038849000">Call Now</a>
         </form>
-        <form class="contact__content__form emailContact">
+        <form class="contact__content__form selected">
           <div class="contact__content__form__name">
             <fieldset class="entry__area">
               <input type="text" name="name" id="name" class="correct" placeholder="John Doe"/>
@@ -136,9 +118,9 @@
             </fieldset>
             <span class="error-message__message">A valid message please</span>
           </div>
-          <input type="submit" value="Submit" class="contact__content__form__submit">
+          <input type="submit" value="mail" class="contact__content__form__submit">
         </form>
-        <form class="contact__content__form whatsappContact">
+        <form class="contact__content__form">
           <div class="contact__content__form__name">
             <fieldset class="entry__area">
               <input type="text" name="name" id="name" class="correct" placeholder="John Doe"/>
@@ -153,7 +135,7 @@
             </fieldset>
             <span class="error-message__message">A valid message please</span>
           </div>
-          <input type="submit" value="Submit" class="contact__content__form__submit">
+          <input type="submit" value="chat" class="contact__content__form__submit">
         </form>
       </div>
     </section>
