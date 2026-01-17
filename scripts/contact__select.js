@@ -9,15 +9,12 @@ contactType.forEach((e,index) => {
     contactButtons.forEach(e => { e.classList.remove('selected') });
     contactForms.forEach(e => { e.classList.remove('selected') });
     if (type == 'phone') {
-      console.log('phone Contact selected')
       contactButtons[index].classList.add('selected')
       contactForms[index].classList.add('selected')
     } else if (type == 'email') {
-      console.log('email Contact selected')
       contactButtons[index].classList.add('selected')
       contactForms[index].classList.add('selected')
     } else {
-      console.log('whatsapp Contact selected')
       contactButtons[index].classList.add('selected')
       contactForms[index].classList.add('selected')
     }
