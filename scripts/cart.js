@@ -81,7 +81,29 @@ document.addEventListener('DOMContentLoaded', () => {
     cartContainer.innerHTML = `
     `;
     renderCart()
+    document.querySelector('.wholeCart__placeBtn').style.display="none";
+    document.querySelector('.wholeCart__clearBtn').style.display="none";
+  } else {
+    document.querySelector('.wholeCart__placeBtn').style.display="flex";
+    document.querySelector('.wholeCart__clearBtn').style.display="flex";
   }
+
+  document.querySelector('.wholeCart__placeBtn').addEventListener('click', () => {
+    console.log('dgdddgdgd')
+    let message = "Hello Samli Thrift, I want to order:%0A";
+
+    slots.forEach(item => {
+      message += `- ${item.name} (₦${item.price})%0A`;
+    });
+
+    const total = slots.reduce((sum, item) => sum + item.price, 0);
+    message += `%0ATotal: ₦${total}`;
+
+    const phone = "2348038849000"; 
+    const url = `https://wa.me/${phone}?text=${message}`;
+
+    window.open(url, "_blank");
+  });
 });
 
 document.querySelector('#clear-cart').addEventListener('click', () => {

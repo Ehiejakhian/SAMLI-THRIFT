@@ -2,6 +2,7 @@
 @use '../util/' as *;
 
 #cart {
+  text-align: left;
   width: 100%;
   // border: 1px solid;
   background-color: var(--cream);
@@ -120,6 +121,7 @@
 }
 
 .wholeCart {
+  text-align: center;
   min-height: 100dvh;
   padding: 20px var(--side-padding);
   @include df(normal, start, column, 25px);
@@ -159,6 +161,17 @@
     }
     a:last-of-type {
       @include button(var(--text), var(--bg));
+    }
+  }
+  @media (min-width: $tab) {
+    align-items: center;
+    >* {
+      width: 100%;
+      max-width: 500px;
+    }
+    h2 {
+      width: 100%;
+      max-width: 500px;
     }
   }
 }

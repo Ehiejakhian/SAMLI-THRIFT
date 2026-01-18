@@ -22,6 +22,7 @@ document.querySelectorAll('.get-slot').forEach(button => {
 
     // Add to slots array
     slots.push(slotData);
+    //Ehi_____________________________________________________________________________________________________________________________________Code here to check if element is alredy in cart.
     console.log('Slot added:', slotData);
 
     // Save to localStorage

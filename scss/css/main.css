@@ -7,18 +7,6 @@
   font-family: "smooch sans";
   src: url("../../assets/fonts/SmoochSans-VariableFont_wght.ttf") format("truetype");
 }
-@font-face {
-  font-family: "cera__black__regular";
-  src: url("../../assets/fonts/cera__round/CeraRoundProBlackRegular.woff") format("woff");
-}
-@font-face {
-  font-family: "cera__light__regular";
-  src: url("../../assets/fonts/cera__round/CeraRoundProLightRegular.woff") format("woff");
-}
-@font-face {
-  font-family: "cera__regular";
-  src: url("../../assets/fonts/cera__round/CeraRoundProRegular.woff") format("woff");
-}
 :root {
   --text: #121212;
   --bg: #fff;
@@ -464,6 +452,7 @@ footer .toggle-theme #theme-checkbox {
 }
 
 #cart {
+  text-align: left;
   width: 100%;
   background-color: var(--cream);
   padding: clamp(20px, 5dvw, 40px);
@@ -573,6 +562,7 @@ footer .toggle-theme #theme-checkbox {
 }
 
 .wholeCart {
+  text-align: center;
   min-height: 100dvh;
   padding: 20px var(--side-padding);
   display: flex;
@@ -687,6 +677,19 @@ footer .toggle-theme #theme-checkbox {
   color: var(--bg);
   background: var(--header-bg);
   border-color: var(--header-bg);
+}
+@media (min-width: 768px) {
+  .wholeCart {
+    align-items: center;
+  }
+  .wholeCart > * {
+    width: 100%;
+    max-width: 500px;
+  }
+  .wholeCart h2 {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 .contact {
