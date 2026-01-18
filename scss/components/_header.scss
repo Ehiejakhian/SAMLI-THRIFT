@@ -160,6 +160,9 @@ header {
             span {
               font-size: 13px;
             }
+            &.current {
+              color: rgb(0, 255, 115);
+            }
           }
           &:not(:last-of-type) {
             border-right: 1px solid;
