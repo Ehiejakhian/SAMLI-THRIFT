@@ -123,19 +123,19 @@
         <form class="contact__content__form">
           <div class="contact__content__form__name">
             <fieldset class="entry__area">
-              <input type="text" name="name" id="name" class="correct" placeholder="John Doe"/>
-              <legend for="name">Your Name</legend>
+              <input type="text" name="name" id="whatsapp__name" class="correct" placeholder="John Doe"/>
+              <legend for="whatsapp__name">Your Name</legend>
             </fieldset>
-            <span class="error-message__name">A valid name please</span>
+            <span class="error-message__name whatsapp__name__error">A valid name please</span>
           </div>
           <div class="contact__content__form__message">
             <fieldset class="entry__area">
-              <textarea name="message" id="message" rows="5" placeholder="Hello LUVTOP! ...."></textarea>
+              <textarea name="message" id="whatsapp__message" rows="5" placeholder="Hello SAMLI! ...."></textarea>
               <legend for="message">Your Message</legend>
             </fieldset>
-            <span class="error-message__message">A valid message please</span>
+            <span class="error-message__message whatsapp__message__error">A valid message please</span>
           </div>
-          <input type="submit" value="chat" class="contact__content__form__submit">
+          <input type="submit" value="chat" class="contact__content__form__submit" id="whatsapp__submit"/>
         </form>
       </div>
     </section>
@@ -163,6 +163,7 @@
   <script src="./scripts/main.js"></script>
   <script src="./scripts/contact__form.js" defer></script>
   <script src="./scripts/contact__select.js"></script>
+  <script src="./scripts/contact__whatsapp.js"></script>
   <script src="./scripts/theme.js" defer></script>
 
 </body>

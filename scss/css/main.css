@@ -1,4 +1,38 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "outfit";
+  src: url("../../assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "smooch sans";
+  src: url("../../assets/fonts/SmoochSans-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "cera__black__regular";
+  src: url("../../assets/fonts/cera__round/CeraRoundProBlackRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "cera__light__regular";
+  src: url("../../assets/fonts/cera__round/CeraRoundProLightRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "cera__regular";
+  src: url("../../assets/fonts/cera__round/CeraRoundProRegular.woff") format("woff");
+}
+:root {
+  --text: #121212;
+  --bg: #fff;
+  --cream: #f5f5dc;
+  --header-text: #dbf1f1;
+  --header-text-hover: #f79e4b;
+  --header-bg: #1f7679;
+  --header-nav-bg:#125b5e;
+  --input-focus-color: green;
+  --error: crimson;
+  --side-padding: clamp(20px, 10dvw, 10dvw);
+  --btn-hover-bg: rgba(#ccc, .3);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,20 +51,6 @@ body {
 main {
   padding: 0 !important;
   margin-top: 100px;
-}
-
-:root {
-  --text: #121212;
-  --bg: #fff;
-  --cream: #f5f5dc;
-  --header-text: #dbf1f1;
-  --header-text-hover: #f79e4b;
-  --header-bg: #1f7679;
-  --header-nav-bg:#125b5e;
-  --input-focus-color: green;
-  --error: crimson;
-  --side-padding: clamp(20px, 10dvw, 10dvw);
-  --btn-hover-bg: rgba(#ccc, .3);
 }
 
 @keyframes spin {
@@ -58,22 +78,6 @@ main {
     opacity: 1;
     scale: 1;
   }
-}
-@font-face {
-  font-family: "outfit";
-  src: url("../../assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
-}
-@font-face {
-  font-family: "cera__black__regular";
-  src: url("../../dist/fonts/cera__round/CeraRoundProBlackRegular.woff") format("woff");
-}
-@font-face {
-  font-family: "cera__light__regular";
-  src: url("../../dist/fonts/cera__round/CeraRoundProLightRegular.woff") format("woff");
-}
-@font-face {
-  font-family: "cera__regular";
-  src: url("../../dist/fonts/cera__round/CeraRoundProRegular.woff") format("woff");
 }
 header {
   background: var(--header-bg);
@@ -683,7 +687,7 @@ footer .toggle-theme #theme-checkbox {
 }
 
 .contact {
-  min-height: 100dvh;
+  min-height: calc(100dvh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -763,7 +767,7 @@ footer .toggle-theme #theme-checkbox {
 }
 .contact__content__form {
   width: 100%;
-  display:none;
+  display: none;
 }
 .contact__content__form.selected {
   display: flex;
@@ -771,6 +775,29 @@ footer .toggle-theme #theme-checkbox {
   align-items: normal;
   flex-flow: column;
   gap: 20px;
+}
+.contact__content__form:first-of-type a {
+  font-size: inherit;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 10px 20px;
+  text-align: center;
+  color: var(--text);
+  background: var(--cream);
+  transition: all 0.3s;
+}
+.contact__content__form:first-of-type a:hover {
+  color: var(--bg);
+  background: var(--header-bg);
+  border-color: var(--header-bg);
+}
+.contact__content__form:first-of-type a {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 10px;
 }
 .contact__content__form > div {
   display: flex;

@@ -1,7 +1,7 @@
 @use '../util/' as *;
 
 .contact {
-  min-height: calc(100dvh -100px);
+  min-height: calc(100dvh - 100px);
   @include df(center, center, column, 20px);
   &__content {
     color: var(--text);
@@ -57,7 +57,6 @@
     }
     &__form {
       width: 100%;
-      border: 2px solid red; 
       display: none;
       &.selected {
         @include df(normal, normal, column, 20px);

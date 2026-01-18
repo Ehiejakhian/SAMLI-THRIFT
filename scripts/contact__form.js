@@ -1,6 +1,6 @@
 
 
-let elin = document.querySelector('#name')
+let elin = document.querySelector('#name');
 let email = document.querySelector('#email')
 let phone = document.querySelector('#number')
 let message = document.querySelector('#message');
