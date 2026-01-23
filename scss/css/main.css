@@ -1101,6 +1101,170 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   opacity: 1;
 }
 
+.findUs {
+  min-height: 100dvh;
+  padding: 30px var(--side-padding);
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-flow: column;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .findUs {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    flex-flow: row;
+    gap: 30px;
+  }
+}
+.findUs > * {
+  flex: 1;
+}
+.findUs__img img {
+  width: 100%;
+  display: block;
+}
+.findUs__content {
+  display: flex;
+  justify-content: normal;
+  align-items: start;
+  flex-flow: column;
+  gap: 20px;
+}
+.findUs__content h2 {
+  max-width: 550px;
+  font-family: "smooch sans";
+  color: var(--text);
+  background-color: var(--cream);
+  padding: 10px 20px;
+  border: 2px solid;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+.findUs__content h2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(204, 204, 204, 0.3);
+}
+.findUs__content__links {
+  display: flex;
+  justify-content: normal;
+  align-items: start;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+.findUs__content__links a {
+  font-size: inherit;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 10px 20px;
+  text-align: center;
+  color: var(--text);
+  background: var(--bg);
+  transition: all 0.3s;
+}
+.findUs__content__links a:hover {
+  color: var(--bg);
+  background: var(--header-bg);
+  border-color: var(--header-bg);
+}
+
+.faqs {
+  padding: 30px var(--side-padding);
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  flex-flow: column;
+  gap: 0;
+}
+.faqs__content {
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-flow: column;
+  gap: 20px;
+}
+.faqs__content h2 {
+  max-width: 550px;
+  font-family: "smooch sans";
+  color: var(--text);
+  background-color: var(--cream);
+  padding: 10px 20px;
+  border: 2px solid;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+.faqs__content h2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(204, 204, 204, 0.3);
+}
+.faqs__content details {
+  width: 100%;
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  flex-flow: column;
+  gap: 10px;
+}
+.faqs__content details summary {
+  list-style: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row;
+  gap: 10px;
+}
+.faqs__content details summary::after {
+  content: "+";
+  font-size: 20px;
+  background: var(--cream);
+  height: 25px;
+  width: 25px;
+  line-height: 1;
+  border: 1px solid var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+.faqs__content details[open] summary::after {
+  content: "-";
+}
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
