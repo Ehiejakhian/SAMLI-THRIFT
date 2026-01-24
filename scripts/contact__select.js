@@ -11,7 +11,7 @@ contactType.forEach((e,index) => {
     if (type == 'phone') {
       contactButtons[index].classList.add('selected')
       contactForms[index].classList.add('selected')
-    } else if (type == 'email') {
+    } else if (type == 'whatsapp') {
       contactButtons[index].classList.add('selected')
       contactForms[index].classList.add('selected')
     } else {

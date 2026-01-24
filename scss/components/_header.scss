@@ -177,6 +177,7 @@ header {
       right: var(--side-padding);
       height: 50px;
       width: 50px;
+      border: 2px solid;
       // overflow-x: ;
       @include df(center, center);
       >* {
@@ -194,6 +195,7 @@ header {
       }
       &__call {
         background-color: var(--header-bg);
+        animation: reveal 2s infinite linear;
       }
       &__chat {
         background-color: #02e702;

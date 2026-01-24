@@ -67,12 +67,14 @@
     <section class="contact">
       <div class="contact__content">
         <h1>Contact Us</h1>
-        <p>Please feel free to reach us via email, phone or whatsapp.</p>
+        <p>Please feel free to reach us via phone, whatsapp or email.</p>
         <input type="radio" name="contact__type" id="contact__type__phone">
-        <input type="radio" name="contact__type" id="contact__type__email">
         <input type="radio" name="contact__type" id="contact__type__whatsapp">
+        <input type="radio" name="contact__type" id="contact__type__email">
         <div class="contact__type__selection">
-          <label for="contact__type__phone"><i class="fa fa-phone"></i></label><label for="contact__type__email" class="selected"><i class="fa fa-envelope-o"></i></label><label for="contact__type__whatsapp"><i class="fa fa-whatsapp"></i></label>
+          <label for="contact__type__phone"><i class="fa fa-phone"></i></label>
+          <label for="contact__type__whatsapp" class="selected"><i class="fa fa-whatsapp"></i></label>
+          <label for="contact__type__email"><i class="fa fa-envelope-o"></i></label>
         </div>
         <form class="contact__content__form">
           <p>Reach out to us Directly<br>
@@ -80,7 +82,27 @@
           </p>
           <a href="tel:08038849000">Call Now</a>
         </form>
+
         <form class="contact__content__form selected">
+          <div class="contact__content__form__name">
+            <fieldset class="entry__area">
+              <input type="text" name="name" id="whatsapp__name" class="correct" placeholder="John Doe"/>
+              <legend for="whatsapp__name">Your Name</legend>
+            </fieldset>
+            <span class="error-message__name whatsapp__name__error">A valid name please</span>
+          </div>
+          <div class="contact__content__form__message">
+            <fieldset class="entry__area">
+              <textarea name="message" id="whatsapp__message" rows="5" placeholder="Hello SAMLI! ...."></textarea>
+              <legend for="message">Your Message</legend>
+            </fieldset>
+            <span class="error-message__message whatsapp__message__error">A valid message please</span>
+          </div>
+          <input type="submit" value="chat" class="contact__content__form__submit" id="whatsapp__submit"/>
+        </form>
+
+        
+        <form class="contact__content__form">
           <div class="contact__content__form__name">
             <fieldset class="entry__area">
               <input type="text" name="name" id="name" class="correct" placeholder="John Doe"/>
@@ -111,23 +133,7 @@
           </div>
           <input type="submit" value="mail" class="contact__content__form__submit">
         </form>
-        <form class="contact__content__form">
-          <div class="contact__content__form__name">
-            <fieldset class="entry__area">
-              <input type="text" name="name" id="whatsapp__name" class="correct" placeholder="John Doe"/>
-              <legend for="whatsapp__name">Your Name</legend>
-            </fieldset>
-            <span class="error-message__name whatsapp__name__error">A valid name please</span>
-          </div>
-          <div class="contact__content__form__message">
-            <fieldset class="entry__area">
-              <textarea name="message" id="whatsapp__message" rows="5" placeholder="Hello SAMLI! ...."></textarea>
-              <legend for="message">Your Message</legend>
-            </fieldset>
-            <span class="error-message__message whatsapp__message__error">A valid message please</span>
-          </div>
-          <input type="submit" value="chat" class="contact__content__form__submit" id="whatsapp__submit"/>
-        </form>
+
       </div>
     </section>
   </main>

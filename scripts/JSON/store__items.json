@@ -1,0 +1,35 @@
+
+[
+  {
+    "type": "slot",
+    "id": 1,
+    "name": "Men Formal Sleves",
+    "pieces": 30,
+    "price": "20, 000",
+    "image": "./assets/images/clothes_1.jpg"
+  },
+  {
+    "type": "bale",
+    "id": 2,
+    "name": "UK-mix Bralet bale",
+    "weight": 100,
+    "price": "300, 000",
+    "image": "./assets/images/bale.jpeg"
+  },
+  {
+    "type": "slot",
+    "id": 1,
+    "name": "Female Casual Wear",
+    "pieces": 70,
+    "price": "200, 000",
+    "image": "./assets/images/female.webp"
+  },
+  {
+    "type": "bale",
+    "id": 2,
+    "name": "Children Mix",
+    "weight": 50,
+    "price": "100, 000",
+    "image": "./assets/images/kids.jpg"
+  }
+]

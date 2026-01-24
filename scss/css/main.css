@@ -67,6 +67,14 @@ main {
     scale: 1;
   }
 }
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 header {
   background: var(--header-bg);
   padding: 20px var(--side-padding);
@@ -267,6 +275,7 @@ header .header__content .floating__button {
   right: var(--side-padding);
   height: 50px;
   width: 50px;
+  border: 2px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,6 +301,7 @@ header .header__content .floating__button > * i {
 }
 header .header__content .floating__button__call {
   background-color: var(--header-bg);
+  animation: reveal 2s infinite linear;
 }
 header .header__content .floating__button__chat {
   background-color: #02e702;
@@ -677,6 +687,31 @@ footer .toggle-theme #theme-checkbox {
   color: var(--bg);
   background: var(--header-bg);
   border-color: var(--header-bg);
+}
+.wholeCart__notice {
+  font-size: clamp(14px, 1.5dvw, 18px);
+  color: var(--text);
+  margin-top: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: rgba(204, 204, 204, 0.3);
+  display: flex;
+  justify-content: normal;
+  align-items: start;
+  flex-flow: row;
+  gap: 10px;
+}
+.wholeCart__notice::before {
+  content: "!";
+  padding: 2px 10px;
+  border: 1px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
 }
 @media (min-width: 768px) {
   .wholeCart {
@@ -4578,7 +4613,9 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
 }
 .homeShop .homeShop__slots .wrapper {
   scroll-behavior: smooth;
-  anchor-name: --carousel, --forMarkers;
+  --anchor-name1: --carousel;
+  --anchor-name2: --forMarkers;
+  anchor-name: var(--anchor-name1), var(--anchor-name2);
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
   scroll-marker-group: after;
@@ -4589,7 +4626,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   align-items: center;
   flex-flow: row;
   gap: 10px;
-  position-anchor: --forMarkers;
+  position-anchor: var(--anchor-name2);
   position-area: bottom center;
   transform: translateY(20px);
   width: 100%;
@@ -4607,7 +4644,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   transition: all 0.3s;
   position: fixed;
   outline: none;
-  position-anchor: --carousel;
+  position-anchor: var(--anchor-name1);
   position-area: right center;
   translate: -50%;
   display: flex;

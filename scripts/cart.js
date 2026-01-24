@@ -33,8 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
       cartContainer.innerHTML = `
       <div class="empty__cart">
           <a href="./store.html"><i class="fa fa-shopping-bag"></i></a>
-          <p>You have not added Items to your cart</p>
-          <a href="./store.html">Visit the Shop</a>
+          <p
+            data-en="You have not added Items to your cart"
+            data-pg="You never add any thing to your cart">
+            You have not added Items to your cart
+          </p>
+          <a 
+            href="./store.html" 
+            data-en="Visit the Shop" 
+            data-pg="Check the Shop">
+            Visit the Shop
+          </a>
       </div>
       `;
     } else {
@@ -91,13 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.wholeCart__placeBtn').addEventListener('click', () => {
     console.log('dgdddgdgd')
     let message = "Hello Samli Thrift, I want to order:%0A";
+    let total = 0;
 
     slots.forEach(item => {
-      message += `- ${item.name} (₦${item.price})%0A`;
+      console.log(item.name)
+      console.log(item.price)
+      let p = item.price.replace(' ', '');
+      p = p.replace('₦', '');
+      p = p.replace(',', '');
+      let pr = p * 1;
+      // console.log(pr);
+      message += `- ${item.name} (₦${pr})%0A`;
+      total += pr;
     });
 
-    const total = slots.reduce((sum, item) => sum + item.price, 0);
     message += `%0ATotal: ₦${total}`;
+    console.log(message);
 
     const phone = "2348038849000"; 
     const url = `https://wa.me/${phone}?text=${message}`;
@@ -111,7 +129,4 @@ document.querySelector('#clear-cart').addEventListener('click', () => {
   location.reload();
 });
 
-setInterval(() => {
-  
-},100)
 

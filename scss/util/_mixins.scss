@@ -91,3 +91,12 @@
     scale: 1;
   }
 }
+//animation for floating buttons
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+}
