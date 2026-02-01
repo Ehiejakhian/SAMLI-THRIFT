@@ -2,11 +2,38 @@
 [
   {
     "type": "slot",
+    "id": 0,
+    "name": "Children Shorts slot",
+    "pieces": 30,
+    "price": "20, 000",
+    "des": [
+      "For children (2yrs to 10yrs old).",
+      "30 pieces of varying size",
+      "For children (2yrs to 10yrs old).",
+      "Second grade"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "slot",
     "id": 1,
     "name": "Men Formal Sleves",
     "pieces": 30,
     "price": "20, 000",
-    "image": "./assets/images/clothes_1.jpg"
+    "des": [
+      "30 pieces of Varrying sizes from teens to adults.",
+      "Clean and neat",
+      "First Grade"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
   },
   {
     "type": "bale",
@@ -14,22 +41,34 @@
     "name": "UK-mix Bralet bale",
     "weight": 100,
     "price": "300, 000",
-    "image": "./assets/images/bale.jpeg"
+    "images": [
+      "./assets/images/bale.jpeg",
+      "./assets/images/bale.jpeg",
+      "./assets/images/bale.jpeg"
+    ]
   },
   {
     "type": "slot",
-    "id": 1,
+    "id": 3,
     "name": "Female Casual Wear",
     "pieces": 70,
     "price": "200, 000",
-    "image": "./assets/images/female.webp"
+    "images": [
+      "./assets/images/female.webp",
+      "./assets/images/female.webp",
+      "./assets/images/female.webp"
+    ]
   },
   {
     "type": "bale",
-    "id": 2,
+    "id": 4,
     "name": "Children Mix",
     "weight": 50,
     "price": "100, 000",
-    "image": "./assets/images/kids.jpg"
+    "images": [
+      "./assets/images/kids.jpg",
+      "./assets/images/kids.jpg",
+      "./assets/images/kids.jpg"
+    ]
   }
 ]

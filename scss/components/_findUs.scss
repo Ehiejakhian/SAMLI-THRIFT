@@ -21,6 +21,7 @@
     @include df(normal, start, column, 20px);
     h2 {
       @include h2(var(--text), var(--cream));
+      @include df(normal, center, row, 10px);
     }
     &__links {
       @include df(normal,start, row wrap, 20px);
@@ -41,13 +42,13 @@
     }
     details {
       width: 100%;
-      @include df(normal, normal, column, 10px);
+      @include df(normal, normal, column, 0);
       summary {
         list-style: none;
         outline: none;
-        border: none;
+        border: 1px solid #ccc;
         border-bottom: 2px solid #ccc;
-        padding-bottom: 10px;
+        padding: 10px;
         @include df(space-between, center, row, 10px);
         &::after {
           content: '+';
@@ -65,6 +66,10 @@
           &::after {
             content:'-';
           }
+        }
+        p {
+          padding: 20px;
+          background: var(--cream);
         }
       }
     }

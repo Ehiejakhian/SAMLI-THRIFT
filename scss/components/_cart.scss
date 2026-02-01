@@ -134,9 +134,11 @@
   }
   &__clearBtn {
     @include button();
+    @include df(center, center);
   }
   &__placeBtn {
     @include button(var(--text), var(--cream));
+    @include df(center, center);
   }
   .empty__cart {
     text-align: center;

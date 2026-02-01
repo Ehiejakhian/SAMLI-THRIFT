@@ -129,4 +129,3 @@ document.querySelector('#clear-cart').addEventListener('click', () => {
   location.reload();
 });
 
-

@@ -39,7 +39,7 @@ setTimeout(() => {
 }, 1000);
 
 // Success message logic
-function showSuccessMessage(messageText) {
+export function showSuccessMessage(messageText) {
   let message = document.getElementById('success-message');
 
   if (!message) {

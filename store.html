@@ -131,6 +131,50 @@
    </section>
   </main>
 
+  <template id="modal-template">
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__content__closebtn" id="close_btn"><i class="fa fa-close"></i></button>
+        <div class="modal__content__gallery">
+          <div class="modal__content__gallery__carousel">
+            <img src="./assets/images/clothes_1.jpg"/>
+            <img src="./assets/images/female.webp"/>
+            <img src="./assets/images/men.png"/>
+            <img src="./assets/images/shoe.jpg"/>
+          </div>
+          <div class="modal__content__gallery__caption">
+            <img src="./assets/images/clothes_1.jpg" class="modal__content__gallery__caption__image"/>
+            <div class="modal__content__gallery__caption__text">
+              <h3 id="modal__name">Lorem ipsum dolor sit amet.</h3>
+              <p id="modal__pieces">30 pieces</p>
+              <p id="modal__price">₦100, 000</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__content__cartbtn">
+          <button id="cart_btn">
+            <i class="fa fa-shopping-cart"></i>
+            <span>Add to Cart</span>
+          </button>
+        </div>
+        <div class="modal__content__des">
+          <h2>Description</h2>
+          <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Accusamus, consequuntur.</li>
+            <li>Fuga, eius.</li>
+            <li>Debitis, numquam?</li>
+            <li>Pariatur, repellendus.</li>
+          </ul>
+        </div>
+        <div class="modal__content__contact">
+          <a href="tel:2348038849000"><i class="fa fa-phone"></i><span>Call To Order this Item</span></a>
+          <a href="https://wa.me" id="modal_whatsapp_chat"><i class="fa fa-whatsapp"></i><span>Discuss this order with Samli</span></a>
+        </div>
+      </div>
+    </div>
+  </template>
 
   <footer>
     <div class="credentials">

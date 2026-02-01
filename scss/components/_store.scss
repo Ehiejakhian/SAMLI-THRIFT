@@ -103,4 +103,160 @@ main {
   }
 }
 
+.modal {
+  overflow-y: scroll;
+  // background: red;
+  position: fixed;
+  padding: 150px 0;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  &.active {
+    @include df(center, center);
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &__overlay {
+    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#ccc,.5);
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    background: var(--cream);
+    padding: 40px;
+    @include df(normal, start, column, 20px);
+    img {
+      display: block;
+      width: 100%;
+    }
+    &__closebtn {
+      align-self: flex-end;
+      background: var(--cream);
+      height: 30px;
+      width: 30px;
+      border: 1px solid var(--text);
+      color: var(--text);
+      border-radius: 0;
+      font-size: 20px;
+    }
+    &__gallery {
+      width: 100%;
+      @include df(normal, normal, column, 15px);
+      &__carousel {
+        border: 2px solid var(--text);
+        width: 100%;
+        border: 20px;
+        // height: 400px;
+        margin-bottom: 20px;
+        overflow-x: scroll;
+        anchor-name: --modal;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        @include df(normal, normal, row);
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &::scroll-button(right),&::scroll-button(left) {
+          content: '←';
+          font-weight: 700;
+          font: inherit;
+          border: 1px solid;
+          height: 50px;
+          width: 50px;
+          position: fixed;
+          position-anchor: --modal;
+          position-area: left center;
+          transform: translateX(50%);
+        }
+        &::scroll-button(right) {
+          content:'→';
+          position-area: right center;
+          transform: translateX(-50%);
+        }
+        img {
+          scroll-snap-align: start;
+          object-fit: cover;
+          max-height: 380px;
+        }
+      }
+      &__caption {
+        @include df(normal, start, row, 20px);
+        img {
+          height: 50px;
+          width: 50px;
+          object-fit: cover;
+        }
+        &__text {
+          h3 {
+            font-weight: 600;
+            font-size: 18px;
+          }
+          #modal__pieces {
+            font-size: 14px;
+          }
+          #modal__price {
+            font-family: 'smooch sans';
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &__cartbtn {
+      width: 100%;
+      position: relative;
+      @include df(normal, center);
+      &::before {
+        content:'';
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        background: var(--text);
+      }
+      button {
+        margin: 0 auto;
+        font: inherit;
+        position: relative;
+        @include df(center, center, row, 10px);
+        @include button(var(--text), var(--cream));
+        & {
+          font-size: 15px;
+          border-radius: 50px;
+          padding: 5px 20px;
+        }
+        @media (min-width: $mobile) {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+    &__des {
+      @include df(normal, normal, column, 10px);
+      ul {
+        padding: 0 0 0 20px;
+        font-size: 15px;
+      }
+    }
+    &__contact {
+      @include df(normal, start, column, 15px);
+      a {
+        @include df(normal, center, row, 10px);
+        @include button(var(--text), var(--cream));
+        & {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
 
