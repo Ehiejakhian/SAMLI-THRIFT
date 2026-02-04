@@ -59,7 +59,7 @@
   background: $bg;
   transition: all .3s;
   &:hover {
-    color: var(--bg);
+    color: var(--header-text);
     background: var(--header-bg);
     border-color: var(--header-bg);
   }
@@ -98,5 +98,31 @@
   }
   50% {
     opacity: .5;
+  }
+}
+@keyframes move__contact__btn1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move__contact__btn2 {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
   }
 }

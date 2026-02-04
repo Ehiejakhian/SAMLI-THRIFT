@@ -3,14 +3,13 @@
   {
     "type": "slot",
     "id": 0,
-    "name": "Children Shorts slot",
-    "pieces": 30,
-    "price": "20, 000",
+    "name": "Baggy/Boyfriend Jeans",
+    "pieces": 10,
+    "price": "50, 000",
     "des": [
-      "For children (2yrs to 10yrs old).",
-      "30 pieces of varying size",
-      "For children (2yrs to 10yrs old).",
-      "Second grade"
+      "Unisex",
+      "10 pieces of varying size",
+      "First grade"
     ],
     "images": [
       "./assets/images/clothes_1.jpg",
@@ -21,13 +20,45 @@
   {
     "type": "slot",
     "id": 1,
-    "name": "Men Formal Sleves",
+    "name": "Cargo Trousers",
     "pieces": 30,
-    "price": "20, 000",
+    "price": "90, 000",
     "des": [
-      "30 pieces of Varrying sizes from teens to adults.",
-      "Clean and neat",
-      "First Grade"
+      "Unisex",
+      "30 pieces of varying size",
+      "First grade"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "slot",
+    "id": 2,
+    "name": "Denim Skirts",
+    "pieces": 30,
+    "price": "70, 000",
+    "des": [
+      "For Females",
+      "30 pieces of varying size"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "slot",
+    "id": 3,
+    "name": "Children's Jeans",
+    "pieces": 50,
+    "price": "70, 000",
+    "des": [
+      "For Kids",
+      "50 pieces of varying size"
     ],
     "images": [
       "./assets/images/clothes_1.jpg",
@@ -37,38 +68,152 @@
   },
   {
     "type": "bale",
-    "id": 2,
-    "name": "UK-mix Bralet bale",
+    "id": 4,
+    "name": "Baggy/Boyfriend Jeans",
     "weight": 100,
-    "price": "300, 000",
+    "price": "480, 000",
+    "des": [
+      "Unisex"
+    ],
     "images": [
-      "./assets/images/bale.jpeg",
-      "./assets/images/bale.jpeg",
-      "./assets/images/bale.jpeg"
-    ]
-  },
-  {
-    "type": "slot",
-    "id": 3,
-    "name": "Female Casual Wear",
-    "pieces": 70,
-    "price": "200, 000",
-    "images": [
-      "./assets/images/female.webp",
-      "./assets/images/female.webp",
-      "./assets/images/female.webp"
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
     ]
   },
   {
     "type": "bale",
-    "id": 4,
-    "name": "Children Mix",
-    "weight": 50,
-    "price": "100, 000",
+    "id": 5,
+    "name": "Denim Skirts bale",
+    "weight": 100,
+    "price": "480, 000",
+    "des": [
+      "For Females"
+    ],
     "images": [
-      "./assets/images/kids.jpg",
-      "./assets/images/kids.jpg",
-      "./assets/images/kids.jpg"
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "bale",
+    "id": 6,
+    "name": "Children's Jeans bale",
+    "weight": 100,
+    "price": "450, 000",
+    "des": [
+      "For Kids"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "bale",
+    "id": 7,
+    "name": "China Curtain Top bale",
+    "weight": 100,
+    "price": "330, 000",
+    "des": [
+      "For Females"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "slot",
+    "id": 8,
+    "name": "Unisex Shorts",
+    "pieces": 50,
+    "price": "50, 000",
+    "des": [
+      "For Females"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "bale",
+    "id": 9,
+    "name": "Unisex Shorts",
+    "weight": 100,
+    "price": "400, 000",
+    "des": [
+      "Unisex"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "slot",
+    "id": 10,
+    "name": "Children Mix",
+    "pieces": 100,
+    "price": "80, 000",
+    "des": [
+      "For Kids.",
+      "100pcs of varying sizes."
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "bale",
+    "id": 11,
+    "name": "Children Mix",
+    "weight": 100,
+    "price": "550, 000",
+    "des": [
+      "For Kids"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "others",
+    "id": 12,
+    "name": "Children's Shoe Sack",
+    "price": "200, 000",
+    "des": [
+      "For Kids",
+      "Varying shoe lengths"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
+    ]
+  },
+  {
+    "type": "others",
+    "id": 13,
+    "name": "Ladies hand bag",
+    "price": "200, 000",
+    "des": [
+      "For Females"
+    ],
+    "images": [
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg",
+      "./assets/images/clothes_1.jpg"
     ]
   }
 ]

@@ -17,8 +17,8 @@
   --header-nav-bg:#125b5e;
   --input-focus-color: green;
   --error: crimson;
-  --side-padding: clamp(20px, 10dvw, 10dvw);
   --btn-hover-bg: rgba(#ccc, .3);
+  --side-padding: clamp(20px, 10dvw, 10dvw);
 }
 
 * {
@@ -28,6 +28,7 @@
 }
 
 body {
+  interpolate-size: allow-keywords;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -73,6 +74,32 @@ main {
   }
   50% {
     opacity: 0.5;
+  }
+}
+@keyframes move__contact__btn1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move__contact__btn2 {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
   }
 }
 header {
@@ -275,7 +302,6 @@ header .header__content .floating__button {
   right: var(--side-padding);
   height: 50px;
   width: 50px;
-  border: 2px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,10 +327,9 @@ header .header__content .floating__button > * i {
 }
 header .header__content .floating__button__call {
   background-color: var(--header-bg);
-  animation: reveal 2s infinite linear;
 }
 header .header__content .floating__button__chat {
-  background-color: #02e702;
+  background-color: #069906;
 }
 @media (min-width: 768px) {
   header .header__content {
@@ -630,7 +655,7 @@ footer .toggle-theme #theme-checkbox {
   gap: 0;
 }
 .wholeCart__clearBtn:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -650,7 +675,7 @@ footer .toggle-theme #theme-checkbox {
   gap: 0;
 }
 .wholeCart__placeBtn:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -694,7 +719,7 @@ footer .toggle-theme #theme-checkbox {
   transition: all 0.3s;
 }
 .wholeCart .empty__cart a:last-of-type:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -863,7 +888,7 @@ footer .toggle-theme #theme-checkbox {
   transition: all 0.3s;
 }
 .contact__content__form:first-of-type a:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -987,7 +1012,7 @@ footer .toggle-theme #theme-checkbox {
   transition: all 0.3s;
 }
 .contact__content__form__submit:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -1309,7 +1334,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   transition: all 0.3s;
 }
 .modal__content__cartbtn button:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -1357,7 +1382,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   transition: all 0.3s;
 }
 .modal__content__contact a:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -1366,8 +1391,9 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
 }
 
 .findUs {
-  min-height: 100dvh;
+  min-height: 70dvh;
   padding: 30px var(--side-padding);
+  position: relative;
   display: flex;
   justify-content: normal;
   align-items: center;
@@ -1386,16 +1412,33 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
 .findUs > * {
   flex: 1;
 }
-.findUs__img img {
+.findUs__img {
+  position: relative;
+  z-index: 1;
+}
+.findUs__img iframe {
   width: 100%;
   display: block;
 }
 .findUs__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
   display: flex;
-  justify-content: normal;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   flex-flow: column;
   gap: 20px;
+}
+@media (min-width: 768px) {
+  .findUs__content {
+    text-align: left;
+    display: flex;
+    justify-content: normal;
+    align-items: start;
+    flex-flow: column;
+    gap: 20px;
+  }
 }
 .findUs__content h2 {
   max-width: 550px;
@@ -1448,7 +1491,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   transition: all 0.3s;
 }
 .findUs__content__links a:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -1536,6 +1579,66 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
 .faqs__content details[open] p {
   padding: 20px;
   background: var(--cream);
+}
+
+.thanks {
+  padding: 20px var(--side-padding);
+  min-height: 80dvh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 10px;
+}
+.thanks h2 {
+  max-width: 550px;
+  font-family: "smooch sans";
+  color: var(--text);
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+.thanks h2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(204, 204, 204, 0.3);
+}
+.thanks h1 {
+  color: var(--text);
+}
+.thanks p {
+  font-size: 18px;
+}
+.thanks__backbtn {
+  font-size: inherit;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 10px 20px;
+  text-align: center;
+  color: #000;
+  background: #eee;
+  transition: all 0.3s;
+}
+.thanks__backbtn:hover {
+  color: var(--header-text);
+  background: var(--header-bg);
+  border-color: var(--header-bg);
 }
 
 /*!
@@ -4979,7 +5082,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   transition: all 0.3s;
 }
 .homeShop .homeShop__slots .wrapper .slot .slot-costs .get-slot:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }
@@ -5004,7 +5107,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   transition: all 0.3s;
 }
 .homeShop__seeMoreBtn:hover {
-  color: var(--bg);
+  color: var(--header-text);
   background: var(--header-bg);
   border-color: var(--header-bg);
 }

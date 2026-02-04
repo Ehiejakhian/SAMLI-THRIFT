@@ -1,8 +1,10 @@
 @use '../util/' as *;
 
 .findUs {
-  min-height: 100dvh;
+  // background: url("../../assets/images/map__bg.png") no-repeat center/cover;
+  min-height: 70dvh;
   padding: 30px var(--side-padding);
+  position: relative;
   @include df(normal, center, column, 30px);
   @media (min-width: $tab) {
     @include df(normal, center, row, 30px);
@@ -11,14 +13,32 @@
   >* {
     flex: 1;
   }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   background: linear-gradient(transparent, #fff);
+  // }
   &__img {
-    img {
+    position: relative;
+    z-index: 1;
+    iframe {
       width: 100%;
       display: block;
     }
   }
   &__content {
-    @include df(normal, start, column, 20px);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    @include df(center, center, column, 20px);
+    @media (min-width: $tab) {
+      text-align: left;
+      @include df(normal, start, column, 20px);
+    }
     h2 {
       @include h2(var(--text), var(--cream));
       @include df(normal, center, row, 10px);
@@ -33,6 +53,7 @@
 }
 
 .faqs {
+
   padding: 30px var(--side-padding);
   @include df(normal, normal, column, 0);
   &__content {

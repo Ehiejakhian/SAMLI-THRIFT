@@ -2,6 +2,7 @@ import { showSuccessMessage } from "/scripts/store.js";
 
 let slot_wr = document.querySelector(".slots");
 let bale_wr = document.querySelector(".bales");
+let others_wr = document.querySelector(".others");
 
 let slot_temp = document.querySelector("template#slot");
 let slot_content = slot_temp.content;
@@ -21,19 +22,27 @@ fetch("/scripts/JSON/store__items.json")
 
 function populateDom(el) {
   let clone = document.importNode(slot_content, true);
+  clone.querySelector('.slot').setAttribute('data-id', el.id);
   clone.querySelector(".slot-image>img").src = el.images[0];
   clone.querySelector(".slot-name").textContent = el.name;
-  el.type == "slot"
-    ? (clone.querySelector(".slot-pieces").textContent = `${el.pieces} pieces`)
-    : (clone.querySelector(".slot-pieces").textContent = `${el.weight} kg`);
   clone.querySelector(".slot-price").textContent = `₦${el.price}`;
-  el.type == 'slot'
-    ? (clone.querySelector(".get-slot").textContent = 'Get Slot')
-    : (clone.querySelector(".get-slot").textContent = 'Get Bale');
-
-  clone.querySelector('.slot').setAttribute('data-id', el.id);
-  el.type == "slot" ? slot_wr.appendChild(clone) : 
-  bale_wr.appendChild(clone);
+  switch (el.type) {
+    case "slot":
+      clone.querySelector(".slot-pieces").textContent = `${el.pieces} pieces`;
+      clone.querySelector(".get-slot").textContent = 'Get Slot';
+      slot_wr.appendChild(clone);
+      break;
+    case "bale":
+      clone.querySelector(".slot-pieces").textContent = `${el.weight} kg`;
+      clone.querySelector(".get-slot").textContent = 'Get Bale';
+      bale_wr.appendChild(clone)
+      break;
+    case "others":
+      clone.querySelector(".slot-pieces").innerHTML = '';
+      clone.querySelector(".get-slot").innerHTML = `<i class="fa fa-shopping-basket"></i>`;
+      others_wr.appendChild(clone)
+      break;
+  }
 }
 
 function listenForClicks(data) {

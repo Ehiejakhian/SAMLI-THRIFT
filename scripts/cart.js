@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
 
       slots.forEach((slot, index) => {
+        console.log(slot)
         const item = document.createElement('div');
         item.className = 'cart-item';
         item.innerHTML = `
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="cart-details">
             <h4>${slot.name}</h4>
-            <p>${slot.pieces}</p>
+            <p>${slot.pieces || ''}</p>
             <p>${slot.price}</p>
           </div>
         `;
