@@ -298,6 +298,7 @@
     }
   }
   &__seeMoreBtn {
+    width: max-content;
     margin-top: 20px;
     @include button(var(--text), var(--bg));
   }

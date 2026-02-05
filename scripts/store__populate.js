@@ -90,7 +90,9 @@ function displayModal(data, i, x) {
   
   //For Pieces
   if (!data[p_id].pieces) {
-    modal_dom.querySelector('#modal__pieces').textContent = `${data[p_id].weight} kg`;
+    (!data[p_id].weight)
+      ? modal_dom.querySelector('#modal__pieces').textContent = ''
+      : modal_dom.querySelector('#modal__pieces').textContent = `${data[p_id].weight} kg` || ``;
   } else if (data[p_id].pieces) {
     modal_dom.querySelector('#modal__pieces').textContent = `${data[p_id].pieces} pieces`;
   }
