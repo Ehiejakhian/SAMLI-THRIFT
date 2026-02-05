@@ -3,7 +3,7 @@ let newTemp = document.querySelector('#new__item');
 let newContent = newTemp.content;
 let new__grid = document.querySelector('.new__grid');
 
-fetch("./JSON/store__items.json")
+fetch("scripts\JSON\store__items.json")
   .then((res) => res.json())
   .then((data) => {
     fillTheEarth(data);
