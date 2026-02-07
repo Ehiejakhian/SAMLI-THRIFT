@@ -1,4 +1,4 @@
-import { showSuccessMessage } from "/scripts/store.js";
+import { showSuccessMessage } from "./store.js";
 
 let slot_wr = document.querySelector(".slots");
 let bale_wr = document.querySelector(".bales");
@@ -9,7 +9,7 @@ let slot_content = slot_temp.content;
 let bale_temp = document.querySelector("template#bale");
 let bale_content = bale_temp.content;
 
-fetch("/scripts/JSON/store__items.json")
+fetch("./JSON/store__items.json")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((el) => {
