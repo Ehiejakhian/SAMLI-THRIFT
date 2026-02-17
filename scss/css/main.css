@@ -8,6 +8,7 @@
   src: url("../../assets/fonts/SmoochSans-VariableFont_wght.ttf") format("truetype");
 }
 :root {
+  scroll-behavior: smooth;
   --text: #121212;
   --bg: #fff;
   --cream: #f5f5dc;
@@ -19,27 +20,6 @@
   --error: crimson;
   --btn-hover-bg: rgba(#ccc, .3);
   --side-padding: clamp(20px, 10dvw, 10dvw);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  interpolate-size: allow-keywords;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.6;
-  font-size: 18px;
-  overflow-x: hidden;
-  font-family: "outfit";
-}
-
-main {
-  padding: 0 !important;
-  margin-top: 100px;
 }
 
 @keyframes spin {
@@ -100,6 +80,116 @@ main {
   100% {
     transform: translateY(0);
     opacity: 0;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  interpolate-size: allow-keywords;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 18px;
+  overflow-x: hidden;
+  font-family: "outfit";
+}
+
+main {
+  padding: 0 !important;
+  margin-top: 100px;
+}
+
+.loader {
+  background: var(--header-bg);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.loader.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+.loader__content {
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-flow: column;
+  gap: 10px;
+}
+.loader__content .row-1 {
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  flex-flow: row;
+  gap: 10px;
+}
+.loader__content .row-1 span {
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+.loader__content .row-2 {
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  flex-flow: row;
+  gap: 10px;
+}
+.loader__content .row-2 span {
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+.loader__content .row__divider {
+  width: 250px;
+  height: 4px;
+  position: relative;
+}
+.loader__content .row__divider__content {
+  position: absolute;
+  border: 1px solid orange;
+  width: 50%;
+  background: orange;
+  right: 0%;
+  transition: all 0.3s;
+  animation: loader__text 3s linear infinite;
+}
+
+@keyframes loader__text {
+  0% {
+    right: auto;
+    left: 0%;
+  }
+  50% {
+    left: auto;
+    right: 0%;
   }
 }
 header {
