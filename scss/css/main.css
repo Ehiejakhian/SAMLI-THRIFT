@@ -1490,6 +1490,88 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   font-size: 15px;
 }
 
+.search {
+  border: 1px solid;
+  padding: 20px var(--side-padding);
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  flex-flow: column;
+  gap: 25px;
+}
+.search__box {
+  border: 2px solid var(--text);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  flex-flow: row;
+  gap: 0;
+}
+.search__box__input {
+  text-transform: capitalize;
+  font: inherit;
+  font-weight: bold;
+  height: 100%;
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+}
+.search__box button {
+  border: none;
+  background: none;
+  border-left: 1px solid;
+  font-size: 1.5rem;
+  padding: 0 20px;
+  color: var(--text);
+  cursor: pointer;
+}
+.search__box:focus-within {
+  border-color: var(--header-bg);
+}
+.search__box:focus-within button {
+  color: var(--header-bg);
+}
+.search__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+.search__grid > * {
+  border: 1px solid;
+}
+.search__grid .slot {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: normal;
+  align-items: start;
+  flex-flow: row;
+  gap: 20px;
+}
+.search__grid .slot-image {
+  width: 100px;
+  height: auto;
+  align-self: start;
+}
+.search__grid .slot-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.search__grid .slot-id {
+  font-size: 1rem !important;
+}
+.search__grid .slot-costs {
+  width: 100%;
+  border: 1px solid;
+}
+
 .findUs {
   min-height: 70dvh;
   padding: 30px var(--side-padding);
@@ -1744,6 +1826,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
 }
 
 .new {
+  color: #fff;
   padding: 20px var(--side-padding);
   display: flex;
   justify-content: center;
@@ -1817,7 +1900,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
 }
 .new__grid__item__content {
   background: rgba(0, 0, 0, 0.5);
-  border-top: 1px solid;
+  border-top: 1px solid #fff;
   position: absolute;
   bottom: 0;
   z-index: 2;
@@ -1851,7 +1934,7 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   gap: 10px;
 }
 .new__grid__item__content > :nth-child(1) > div p:not(:last-of-type) {
-  border-right: 2px solid var(--text);
+  border-right: 2px solid #fff;
   padding-right: 10px;
 }
 .new__grid__item__content > :nth-child(1) > div p:first-of-type {

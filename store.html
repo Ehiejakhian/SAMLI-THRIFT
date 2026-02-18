@@ -104,73 +104,128 @@
 
   <div id="success-message" class="success-message">Slot added to cart 🛒</div>
 
-
   <main>
+    <section class="search">
+      <div class="search__box">
+        <input type="text" name="search__input" id="search__input" class="search__box__input" placeholder="Search Samli"/>
+        <button>
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+
+      <div class="search__grid">
+        <div class="slot">
+          <div class="slot-image">
+            <img src="./assets/images/clothes_1.jpg" alt="...">
+          </div>
+          <div class="slot-id">
+            <h3 class="slot-name">Men Formal Sleves</h3>
+            <span class="slot-pieces">30 pieces</span>
+          </div>
+          <div class="slot-costs">
+            <span class="slot-price">₦20, 000</span>
+  
+            <button class="get-slot">Get Slot</button>
+          </div>
+        </div>
+        <div class="slot">
+          <div class="slot-image">
+            <img src="./assets/images/advert-bales-1.jpg" alt="...">
+          </div>
+          <div class="slot-id">
+            <h3 class="slot-name">Men Formal Sleves</h3>
+            <span class="slot-pieces">30 pieces</span>
+          </div>
+          <div class="slot-costs">
+            <span class="slot-price">₦20, 000</span>
+  
+            <button class="get-slot">Get Slot</button>
+          </div>
+        </div>
+        <div class="slot">
+          <div class="slot-image">
+            <img src="./assets/images/clothes_1.jpg" alt="...">
+          </div>
+          <div class="slot-id">
+            <h3 class="slot-name">Men Formal Sleves</h3>
+            <span class="slot-pieces">30 pieces</span>
+          </div>
+          <div class="slot-costs">
+            <span class="slot-price">₦20, 000</span>
+  
+            <button class="get-slot">Get Slot</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <h1>Shop</h1>
+    <!-- STORE -->
     <section class="homeShop">
-    <h2>Available Slots</h2>
-    <div class="homeShop__slots">
-      <div class="wrapper slots">
-        <template id="slot">
-          <div class="slot">
-            <div class="slot-image">
-              <img src="./assets/images/clothes_1.jpg" alt="...">
+      <h2>Available Slots</h2>
+      <div class="homeShop__slots">
+        <div class="wrapper slots">
+          <template id="slot">
+            <div class="slot">
+              <div class="slot-image">
+                <img src="./assets/images/clothes_1.jpg" alt="...">
+              </div>
+              <div class="slot-id">
+                <h3 class="slot-name">Men Formal Sleves</h3>
+                <span class="slot-pieces">30 pieces</span>
+              </div>
+              <div class="slot-costs">
+                <span class="slot-price">₦20, 000</span>
+      
+                <button class="get-slot">Get Slot</button>
+              </div>
             </div>
-            <div class="slot-id">
-              <h3 class="slot-name">Men Formal Sleves</h3>
-              <span class="slot-pieces">30 pieces</span>
-            </div>
-            <div class="slot-costs">
-              <span class="slot-price">₦20, 000</span>
-    
-              <button class="get-slot">Get Slot</button>
-            </div>
-          </div>
-        </template>
+          </template>
+        </div>
       </div>
-    </div>
-    <h2>Bales</h2>
-    <div class="homeShop__slots">
-      <div class="wrapper bales">
-        <template id="bale">
-          <div class="slot">
-            <div class="slot-image">
-              <img src="./assets/images/clothes_1.jpg" alt="...">
+      <h2>Bales</h2>
+      <div class="homeShop__slots">
+        <div class="wrapper bales">
+          <template id="bale">
+            <div class="slot">
+              <div class="slot-image">
+                <img src="./assets/images/clothes_1.jpg" alt="...">
+              </div>
+              <div class="slot-id">
+                <h3 class="slot-name">Men Formal Sleves</h3>
+                <span class="slot-pieces">30 pieces</span>
+              </div>
+              <div class="slot-costs">
+                <span class="slot-price">₦20, 000</span>
+      
+                <button class="get-slot">Get Slot</button>
+              </div>
             </div>
-            <div class="slot-id">
-              <h3 class="slot-name">Men Formal Sleves</h3>
-              <span class="slot-pieces">30 pieces</span>
-            </div>
-            <div class="slot-costs">
-              <span class="slot-price">₦20, 000</span>
-    
-              <button class="get-slot">Get Slot</button>
-            </div>
-          </div>
-        </template>
+          </template>
+        </div>
       </div>
-    </div>
-    <h2>Shoes and bags</h2>
-    <div class="homeShop__slots">
-      <div class="wrapper others">
-        <template id="others">
-          <div class="slot">
-            <div class="slot-image">
-              <img src="./assets/images/clothes_1.jpg" alt="...">
+      <h2>Shoes and bags</h2>
+      <div class="homeShop__slots">
+        <div class="wrapper others">
+          <template id="others">
+            <div class="slot">
+              <div class="slot-image">
+                <img src="./assets/images/clothes_1.jpg" alt="...">
+              </div>
+              <div class="slot-id">
+                <h3 class="slot-name">Men Formal Sleves</h3>
+              </div>
+              <div class="slot-costs">
+                <span class="slot-price">₦20, 000</span>
+      
+                <button class="get-slot">Get Slot</button>
+              </div>
             </div>
-            <div class="slot-id">
-              <h3 class="slot-name">Men Formal Sleves</h3>
-            </div>
-            <div class="slot-costs">
-              <span class="slot-price">₦20, 000</span>
-    
-              <button class="get-slot">Get Slot</button>
-            </div>
-          </div>
-        </template>
+          </template>
+        </div>
       </div>
-    </div>
-     <a href="./cart.html" class="homeShop__seeMoreBtn">See Your cart »</a>
+      <a href="./cart.html" class="homeShop__seeMoreBtn">See Your cart »</a>
    </section>
   </main>
 

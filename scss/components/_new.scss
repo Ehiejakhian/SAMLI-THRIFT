@@ -2,6 +2,7 @@
 
 .new {
   $t__time: 1s;
+  color: #fff;
   padding: 20px var(--side-padding);
   @include df(center, center, column, 50px);
   h2 {
@@ -39,7 +40,7 @@
       }
       &__content {
         background: rgba(#000,.5);
-        border-top: 1px solid;
+        border-top: 1px solid #fff;
         position: absolute;
         bottom: 0;
         z-index: 2;
@@ -59,7 +60,7 @@
             @include df(normal, normal, row, 10px);
             p {
               &:not(:last-of-type) {
-                border-right: 2px solid var(--text);
+                border-right: 2px solid #fff;
                 padding-right: 10px;
               }
               &:first-of-type {
