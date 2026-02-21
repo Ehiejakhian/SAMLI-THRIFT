@@ -1,6 +1,7 @@
 
 let search__slot__template = document.querySelector('#search__slot__template');
 let slot__content = search__slot__template.content;
+console.log('Version 1.4.0');
 
 fetch("./JSON/store__items.json")
 .then((res) => res.json())
