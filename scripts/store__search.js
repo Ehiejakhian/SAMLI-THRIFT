@@ -2,7 +2,7 @@
 let search__slot__template = document.querySelector('#search__slot__template');
 let slot__content = search__slot__template.content;
 
-fetch("./JSON/store__items.json")
+fetch("./scripts/JSON/store__items.json")
 .then((res) => res.json())
   .then((data) => {
     listenForSearchInput(data);
@@ -73,4 +73,4 @@ function populateSearchGrid(filteredData, val) {
   });
 }
 
-console.log('Version 1.5.0');
+console.log('Version 1.6.0');
