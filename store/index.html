@@ -105,7 +105,7 @@
   <div id="success-message" class="success-message">Slot added to cart 🛒</div>
 
   <main>
-    <section class="search active">
+    <section class="search" id="search">
       <div class="search__box">
         <input type="text" name="search__input" id="search__input" class="search__box__input" placeholder="Search ..."/>
         <button>
@@ -113,58 +113,26 @@
         </button>
       </div>
 
-      <div class="search__grid">
-        <div class="slot" data-id="0">
-          <div class="slot-image">
-            <img src="../assets/images/clothes_1.jpg" alt="...">
-          </div>
-          <div class="slot__des">
-            <!-- Slot Descriptions -->
-            <div class="slot-id">
-              <h3 class="slot-name">Men Formal Sleves</h3>
-              <span class="slot-pieces">30 pieces</span>
+      <div class="search__grid" id="search__grid">
+        <template id="search__slot__template">
+          <div class="slot" data-id="0">
+            <div class="slot-image">
+              <img src="../assets/images/clothes_1.jpg" alt="...">
             </div>
-            <div class="slot-costs">
-              <span class="slot-price">₦20,000</span>
-    
-              <button class="get-slot">Get Slot</button>
-            </div>
-          </div>
-        </div>
-        <div class="slot" data-id="1">
-          <div class="slot-image">
-            <img src="/assets/images/men.png" alt="...">
-          </div>
-          <div class="slot__des">
-            <!-- Slot Descriptions -->
-            <div class="slot-id">
-              <h3 class="slot-name">Boy friend / Baggy jeans for men</h3>
-              <span class="slot-pieces">30 pieces</span>
-            </div>
-            <div class="slot-costs">
-              <span class="slot-price">₦20,000</span>
-    
-              <button class="get-slot">Get Slot</button>
+            <div class="slot__des">
+              <!-- Slot Descriptions -->
+              <div class="slot-id">
+                <h3 class="slot-name">Men Formal Sleves</h3>
+                <span class="slot-pieces">30 pieces</span>
+              </div>
+              <div class="slot-costs">
+                <span class="slot-price">₦20,000</span>
+      
+                <button class="get-slot">Get Slot</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="slot" data-id="2">
-          <div class="slot-image">
-            <img src="../assets/images/clothes_1.jpg" alt="...">
-          </div>
-          <div class="slot__des">
-            <!-- Slot Descriptions -->
-            <div class="slot-id">
-              <h3 class="slot-name">Men Formal Sleves</h3>
-              <span class="slot-pieces">30 pieces</span>
-            </div>
-            <div class="slot-costs">
-              <span class="slot-price">₦20,000</span>
-    
-              <button class="get-slot">Get Slot</button>
-            </div>
-          </div>
-        </div>
+        </template>
       </div>
 
       <div class="search__empty">

@@ -1581,11 +1581,14 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   flex-flow: column;
   gap: 25px;
 }
-.search.normal .search__grid {
+.search.normal .search__grid, .search.normal .search__empty {
   display: none;
 }
 .search.active {
-  height: 100dvh;
+  min-height: 100dvh;
+}
+.search.active + .homeShop {
+  display: none;
 }
 .search.none .search__grid {
   display: none;

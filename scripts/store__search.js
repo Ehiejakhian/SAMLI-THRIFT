@@ -1,4 +1,7 @@
 
+let search__slot__template = document.querySelector('#search__slot__template');
+let slot__content = search__slot__template.content;
+
 fetch("/scripts/JSON/store__items.json")
 .then((res) => res.json())
   .then((data) => {
@@ -14,35 +17,67 @@ function listenForSearchInput(data) {
   search__input.addEventListener('keyup', e => {
     validateInputInfo(e, data);
   });
+  document.addEventListener('click', e => {
+    let search = document.querySelector('#search');
+    if (!e.target.closest('.search__box')  && search__input.value == '') {
+      search.classList.remove('active');
+      search.classList.add('normal');
+
+    }
+  });
 }
 
 function validateInputInfo(e, data) {
-  let val = e.target.value;
+  let val = e.target.value.toLowerCase().trim();
   let key = e.key;
-  console.log(key, val);
+  let filteredData = [];
+
+  filteredData = data.filter(el => {
+    const searchableString = `
+      ${el.name}${el.tags ? ' ' + el.tags.join(' ') : ''}`.toLowerCase();
+    
+    return searchableString.includes(val);
+  });
+  console.log(filteredData, val);
+  populateSearchGrid(filteredData, val);
+  
 }
 
-function populateSearchGrid(el) {
-  let clone = document.importNode(slot_content, true);
-  clone.querySelector('.slot').setAttribute('data-id', el.id);
-  clone.querySelector(".slot-image>img").src = el.images[0];
-  clone.querySelector(".slot-name").textContent = el.name;
-  clone.querySelector(".slot-price").textContent = `₦${el.price}`;
-  switch (el.type) {
-    case "slot":
-      clone.querySelector(".slot-pieces").textContent = `${el.pieces} pieces`;
-      clone.querySelector(".get-slot").textContent = 'Get Slot';
-      slot_wr.appendChild(clone);
-      break;
-    case "bale":
-      clone.querySelector(".slot-pieces").textContent = `${el.weight} kg`;
-      clone.querySelector(".get-slot").textContent = 'Get Bale';
-      bale_wr.appendChild(clone)
-      break;
-    case "others":
-      clone.querySelector(".slot-pieces").innerHTML = '';
-      clone.querySelector(".get-slot").innerHTML = `<i class="fa fa-shopping-basket"></i>`;
-      others_wr.appendChild(clone)
-      break;
+
+function populateSearchGrid(filteredData, val) {
+  let search = document.querySelector('#search');
+  let search__grid = document.querySelector('#search__grid');
+  search__grid.innerHTML = '';
+
+  if (filteredData.length === 0 || val == '') {
+    search.classList.add('none');
+    search.classList.add('active');
+    return;
+  } else {
+    search.classList.add('active');
+    search.classList.remove('none');
   }
+
+  filteredData.forEach(el => {
+    let clone = document.importNode(slot__content, true);
+    clone.querySelector('.slot').setAttribute('data-id', el.id);
+    clone.querySelector(".slot-image>img").src = el.images[0];
+    clone.querySelector(".slot-name").textContent = el.name;
+    clone.querySelector(".slot-price").textContent = `₦${el.price}`;
+    switch (el.type) {
+      case "slot":
+        clone.querySelector(".slot-pieces").textContent = `${el.pieces} pieces`;
+        clone.querySelector(".get-slot").textContent = 'Get Slot';
+        break;
+      case "bale":
+        clone.querySelector(".slot-pieces").textContent = `${el.weight} kg`;
+        clone.querySelector(".get-slot").textContent = 'Get Bale';
+        break;
+      case "others":
+        clone.querySelector(".slot-pieces").innerHTML = '';
+        clone.querySelector(".get-slot").innerHTML = `<i class="fa fa-shopping-basket"></i>`;
+        break;
+    }
+    search__grid.innerHTML += clone.querySelector(".slot").outerHTML;
+  });
 }

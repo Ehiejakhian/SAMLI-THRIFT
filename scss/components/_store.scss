@@ -269,12 +269,15 @@ main {
     max-width: 500px;
   }
   &.normal {
-    .search__grid {
+    .search__grid,.search__empty {
       display: none;
     }
   }
   &.active {
-    height: 100dvh;
+    min-height: 100dvh;
+    & + .homeShop {
+      display: none;
+    }
   }
   &.none {
     .search__grid {
