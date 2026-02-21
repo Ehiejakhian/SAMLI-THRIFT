@@ -17,14 +17,6 @@ function listenForSearchInput(data) {
   search__input.addEventListener('keyup', e => {
     validateInputInfo(e, data);
   });
-  document.addEventListener('click', e => {
-    let search = document.querySelector('#search');
-    if (!e.target.closest('.search__box')  && search__input.value == '') {
-      search.classList.remove('active');
-      search.classList.add('normal');
-
-    }
-  });
 }
 
 function validateInputInfo(e, data) {
