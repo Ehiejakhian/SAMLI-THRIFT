@@ -65,6 +65,25 @@
   }
 }
 
+@mixin input {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg) inset !important;
+    -webkit-text-fill-color: var(--text) !important;
+  }
+
+  input:-moz-autofill,
+  input:-moz-autofill:hover,
+  input:-moz-autofill:focus {
+    background-color: transparent !important;
+    -webkit-text-fill-color: var(--text) !important;
+  }
+}
+
 @keyframes spin {
   from {
     translate: 0;

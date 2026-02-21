@@ -9,7 +9,7 @@ let slot_content = slot_temp.content;
 let bale_temp = document.querySelector("template#bale");
 let bale_content = bale_temp.content;
 
-fetch("./scripts/JSON/store__items.json")
+fetch("/scripts/JSON/store__items.json")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((el) => {

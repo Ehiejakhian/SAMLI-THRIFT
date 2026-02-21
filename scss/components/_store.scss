@@ -261,15 +261,57 @@ main {
 }
 
 .search {
-  border: 1px solid;
-  padding: 20px var(--side-padding);
+  position: relative;
+  padding: 50px var(--side-padding) 20px var(--side-padding);
   @include df(normal, normal, column, 25px);
-  &__box {
-    border: 2px solid var(--text);
-    width: 100%;
+  @mixin max_box {
+    align-self: center;
     max-width: 500px;
+  }
+  &.normal {
+    .search__grid {
+      display: none;
+    }
+  }
+  &.active {
+    height: 100dvh;
+  }
+  &.none {
+    .search__grid {
+      display: none;
+    }
+    .search__empty {
+      width: 100%;
+      padding: 50px;
+      color: #757575;
+      @include df(center, center, column, 10px);
+      @include max_box;
+      i {
+        padding: 20px;
+        border: 2px solid;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+        background: rgba(#ccc,.2);
+        @include df(center, center);
+      }
+    }
+  }
+  .search__empty {
+    display: none;
+  }
+  &__box {
+    // position: sticky;
+    // top: 50px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    width: 100%;
     overflow: hidden;
+    transition: all .3s;
     @include df;
+    @include max_box;
+    // @include input;
     &__input {
       text-transform: capitalize;
       font: inherit;
@@ -281,6 +323,7 @@ main {
       outline: none;
       background: transparent;
       color: var(--text);
+      transition: all .3s;
     }
     button {
       border: none;
@@ -288,13 +331,14 @@ main {
       border-left: 1px solid;
       font-size: 1.5rem;
       padding: 0 20px;
-      color: var(--text);
+      color: #ccc;
       cursor: pointer;
+      transition: all .3s;
     }
     &:focus-within {
-      border-color: var(--header-bg);
+      border-color: green;
       button {
-        color: var(--header-bg);
+        color: green;
       }
     }
   }
@@ -302,15 +346,14 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 15px;
-    >* {
-      border: 1px solid;
-    }
     .slot {
+      background: var(--cream);
       padding: 20px;
       width: 100%;
       @include df(normal, start, row, 20px);
       &-image {
         width: 100px;
+        min-width: 100px;
         height: auto;
         align-self: start;
         img {
@@ -319,12 +362,35 @@ main {
           height: 100%;
         }
       }
-      &-id {
-        font-size: 1rem !important;
-      }
-      &-costs {
-        width: 100%;
-        border: 1px solid;
+      &__des {
+        @include df(normal, normal, column, 10px);
+        .slot-id {
+          font-size: 1rem !important;
+          .slot-name {
+            max-width: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .slot-costs {
+          width: 100%;
+          @include df(normal, center, row, 10px);
+          .slot-price {
+            font-family: monospace;
+            font-weight: bold;
+          }
+          .get-slot {
+            @include button;
+            & {
+              font-family: inherit;
+              border: 2px solid;
+              border-radius: 50px;
+              font-size: 15px;
+              padding: 5px 10px;
+            }
+          }
+        }
       }
     }
   }

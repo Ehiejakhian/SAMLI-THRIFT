@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://yourdomain.com/" />
   <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
   <title>Samli Thrift Collections</title>
-  <link rel="stylesheet" href="./scss/css/main.css">
+  <link rel="stylesheet" href="../scss/css/main.css">
 </head>
 
 <body>
@@ -54,15 +54,15 @@
         <span></span><span></span>
       </label>
       <ul>
-        <li><a href="./index.html">
+        <li><a href="../">
           <i class="fa fa-home"></i>
           <span>Home</span>
         </a></li>
-        <li><a href="./contact.html">
+        <li><a href="../contact/">
           <i class="fa fa-commenting"></i>
           <span>Contact</span>
         </a></li>
-        <li><a href="./cart.html">
+        <li><a href="../cart/">
           <i class="fa fa-shopping-cart"></i>
           <span>Cart</span>
         </a></li>
@@ -72,19 +72,19 @@
     <!-- Bottom and absolute positioned Items -->
     <nav class="tab__nav">
       <ul>
-        <li><a href="./index.html">
+        <li><a href="../">
           <i class="fa fa-home"></i>
           <span>Home</span>
         </a></li>
-        <li><a href="./store.html" class="current">
+        <li><a href="../store/" class="current">
           <i class="fa fa-shopping-bag"></i>
           <span>Shop</span>
         </a></li>
-        <li><a href="./cart.html">
+        <li><a href="../cart/">
           <i class="fa fa-shopping-cart"></i>
           <span>Cart</span>
         </a></li>
-        <li><a href="./contact.html">
+        <li><a href="../contact/">
           <i class="fa fa-commenting"></i>
           <span>Contact</span>
         </a></li>
@@ -94,7 +94,7 @@
       <a href="tel:08142340182" class="floating__button__call">
         <i class="fa fa-phone"></i>
       </a>
-      <a href="" class="floating__button__chat">
+      <a href="../contact/" class="floating__button__chat">
         <i class="fa fa-whatsapp"></i>
       </a>
     </div>
@@ -105,58 +105,72 @@
   <div id="success-message" class="success-message">Slot added to cart 🛒</div>
 
   <main>
-    <section class="search">
+    <section class="search active">
       <div class="search__box">
-        <input type="text" name="search__input" id="search__input" class="search__box__input" placeholder="Search Samli"/>
+        <input type="text" name="search__input" id="search__input" class="search__box__input" placeholder="Search ..."/>
         <button>
           <i class="fa fa-search"></i>
         </button>
       </div>
 
       <div class="search__grid">
-        <div class="slot">
+        <div class="slot" data-id="0">
           <div class="slot-image">
-            <img src="./assets/images/clothes_1.jpg" alt="...">
+            <img src="../assets/images/clothes_1.jpg" alt="...">
           </div>
-          <div class="slot-id">
-            <h3 class="slot-name">Men Formal Sleves</h3>
-            <span class="slot-pieces">30 pieces</span>
-          </div>
-          <div class="slot-costs">
-            <span class="slot-price">₦20, 000</span>
-  
-            <button class="get-slot">Get Slot</button>
+          <div class="slot__des">
+            <!-- Slot Descriptions -->
+            <div class="slot-id">
+              <h3 class="slot-name">Men Formal Sleves</h3>
+              <span class="slot-pieces">30 pieces</span>
+            </div>
+            <div class="slot-costs">
+              <span class="slot-price">₦20,000</span>
+    
+              <button class="get-slot">Get Slot</button>
+            </div>
           </div>
         </div>
-        <div class="slot">
+        <div class="slot" data-id="1">
           <div class="slot-image">
-            <img src="./assets/images/advert-bales-1.jpg" alt="...">
+            <img src="/assets/images/men.png" alt="...">
           </div>
-          <div class="slot-id">
-            <h3 class="slot-name">Men Formal Sleves</h3>
-            <span class="slot-pieces">30 pieces</span>
-          </div>
-          <div class="slot-costs">
-            <span class="slot-price">₦20, 000</span>
-  
-            <button class="get-slot">Get Slot</button>
+          <div class="slot__des">
+            <!-- Slot Descriptions -->
+            <div class="slot-id">
+              <h3 class="slot-name">Boy friend / Baggy jeans for men</h3>
+              <span class="slot-pieces">30 pieces</span>
+            </div>
+            <div class="slot-costs">
+              <span class="slot-price">₦20,000</span>
+    
+              <button class="get-slot">Get Slot</button>
+            </div>
           </div>
         </div>
-        <div class="slot">
+        <div class="slot" data-id="2">
           <div class="slot-image">
-            <img src="./assets/images/clothes_1.jpg" alt="...">
+            <img src="../assets/images/clothes_1.jpg" alt="...">
           </div>
-          <div class="slot-id">
-            <h3 class="slot-name">Men Formal Sleves</h3>
-            <span class="slot-pieces">30 pieces</span>
-          </div>
-          <div class="slot-costs">
-            <span class="slot-price">₦20, 000</span>
-  
-            <button class="get-slot">Get Slot</button>
+          <div class="slot__des">
+            <!-- Slot Descriptions -->
+            <div class="slot-id">
+              <h3 class="slot-name">Men Formal Sleves</h3>
+              <span class="slot-pieces">30 pieces</span>
+            </div>
+            <div class="slot-costs">
+              <span class="slot-price">₦20,000</span>
+    
+              <button class="get-slot">Get Slot</button>
+            </div>
           </div>
         </div>
+      </div>
 
+      <div class="search__empty">
+        <i class="fa fa-shopping-basket"></i>
+        <h2>Nothing here</h2>
+        <p>Try something else.</p>
       </div>
     </section>
 
@@ -169,7 +183,7 @@
           <template id="slot">
             <div class="slot">
               <div class="slot-image">
-                <img src="./assets/images/clothes_1.jpg" alt="...">
+                <img src="../assets/images/clothes_1.jpg" alt="...">
               </div>
               <div class="slot-id">
                 <h3 class="slot-name">Men Formal Sleves</h3>
@@ -225,7 +239,7 @@
           </template>
         </div>
       </div>
-      <a href="./cart.html" class="homeShop__seeMoreBtn">See Your cart »</a>
+      <a href="../cart/" class="homeShop__seeMoreBtn">See Your cart »</a>
    </section>
   </main>
 
@@ -236,13 +250,13 @@
         <button class="modal__content__closebtn" id="close_btn"><i class="fa fa-close"></i></button>
         <div class="modal__content__gallery">
           <div class="modal__content__gallery__carousel">
-            <img src="./assets/images/clothes_1.jpg"/>
-            <img src="./assets/images/female.webp"/>
-            <img src="./assets/images/men.png"/>
-            <img src="./assets/images/shoe.jpg"/>
+            <img src="../assets/images/clothes_1.jpg"/>
+            <img src="../assets/images/female.webp"/>
+            <img src="../assets/images/men.png"/>
+            <img src="../assets/images/shoe.jpg"/>
           </div>
           <div class="modal__content__gallery__caption">
-            <img src="./assets/images/clothes_1.jpg" class="modal__content__gallery__caption__image"/>
+            <img src="../assets/images/clothes_1.jpg" class="modal__content__gallery__caption__image"/>
             <div class="modal__content__gallery__caption__text">
               <h3 id="modal__name">Lorem ipsum dolor sit amet.</h3>
               <p id="modal__pieces">30 pieces</p>
@@ -292,11 +306,13 @@
       <label for="theme-checkbox"><i class="fa fa-adjust"></i></label>
     </div>
   </footer>
-  <script src="./scripts/loader.js"></script>
-  <script src="./scripts/main.js"></script>
-  <script type="module" src="./scripts/store__populate.js"></script>
-  <script src="./scripts/store.js" type="module"></script>
-  <script src="./scripts/theme.js" defer></script>
-  <script src="./scripts/store__carousel.js" type="module"></script>
+
+  <script src="../scripts/loader.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script type="module" src="../scripts/store__populate.js"></script>
+  <script src="../scripts/store.js" type="module"></script>
+  <script src="../scripts/theme.js" defer></script>
+  <script src="../scripts/store__carousel.js" type="module"></script>
+  <script defer src="/scripts/store__search.js"></script>
 </body>
 </html>

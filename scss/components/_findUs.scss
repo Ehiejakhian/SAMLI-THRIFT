@@ -44,7 +44,10 @@
       @include df(normal, center, row, 10px);
     }
     &__links {
-      @include df(normal,start, row wrap, 20px);
+      @include df(center,start, row wrap, 20px);
+      @media (min-width: $mini-tab) {
+        @include df(normal,start, row wrap, 20px);
+      }
       a {
         @include button(var(--text), var(--bg));
       }
@@ -63,6 +66,7 @@
     }
     details {
       width: 100%;
+      max-width: 600px;
       @include df(normal, normal, column, 0);
       summary {
         list-style: none;

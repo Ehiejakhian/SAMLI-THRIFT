@@ -11,10 +11,11 @@
       "First grade"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
-    ]
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
+    ],
+    "tags": ["men", "male", "jeans", "unisex", "first grade", "female", "women", "girls", "boys"]
   },
   {
     "type": "slot",
@@ -28,10 +29,11 @@
       "First grade"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
-    ]
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
+    ],
+    "tags": ["men", "male", "jeans", "unisex", "first grade","female", "women", "girls", "boys"]
   },
   {
     "type": "slot",
@@ -44,10 +46,11 @@
       "30 pieces of varying size"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
-    ]
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
+    ],
+    "tags": ["skirt", "jeans", "unisex", "first grade","female", "women", "girls", "boys"]
   },
   {
     "type": "slot",
@@ -60,9 +63,9 @@
       "50 pieces of varying size"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -75,9 +78,9 @@
       "Unisex"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -90,9 +93,9 @@
       "For Females"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -105,9 +108,9 @@
       "For Kids"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -120,9 +123,9 @@
       "For Females"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -135,9 +138,9 @@
       "For Females"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -150,9 +153,9 @@
       "Unisex"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -166,9 +169,9 @@
       "100pcs of varying sizes."
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -181,9 +184,9 @@
       "For Kids"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -196,9 +199,9 @@
       "Varying shoe lengths"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   },
   {
@@ -210,9 +213,9 @@
       "For Females"
     ],
     "images": [
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg",
-      "./assets/images/clothes_1.jpg"
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg",
+      "../assets/images/clothes_1.jpg"
     ]
   }
 ]
