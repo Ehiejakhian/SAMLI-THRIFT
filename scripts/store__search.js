@@ -38,7 +38,6 @@ function validateInputInfo(e, data) {
     
     return searchableString.includes(val);
   });
-  console.log(filteredData, val);
   populateSearchGrid(filteredData, val);
   
 }
