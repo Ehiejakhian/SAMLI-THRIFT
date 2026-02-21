@@ -2,7 +2,7 @@
 let search__slot__template = document.querySelector('#search__slot__template');
 let slot__content = search__slot__template.content;
 
-fetch("/scripts/JSON/store__items.json")
+fetch("./JSON/store__items.json")
 .then((res) => res.json())
   .then((data) => {
     listenForSearchInput(data);
