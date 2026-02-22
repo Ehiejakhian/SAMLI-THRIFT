@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             You have not added Items to your cart
           </p>
           <a 
-            href="./store.html" 
+            href="../store/" 
             data-en="Visit the Shop" 
             data-pg="Check the Shop">
             Visit the Shop
