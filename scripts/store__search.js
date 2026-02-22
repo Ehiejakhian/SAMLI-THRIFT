@@ -73,4 +73,4 @@ function populateSearchGrid(filteredData, val) {
   });
 }
 
-console.log('Version 1.7.0');
+console.log('Version 1.8.0');

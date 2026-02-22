@@ -18,7 +18,7 @@ function fillTheEarth(data) {
 
 function advertise(el) {
   let clone = document.importNode(newContent, true);
-  clone.querySelector('.new__grid__item__images').innerHTML = `<img src=${el.images[0]} alt="img"/>`;
+  clone.querySelector('.new__grid__item__images').innerHTML = `<img src=${el.images[0].slice(1)} alt="img"/>`;
   clone.querySelector('h3').textContent = el.name;
   clone.querySelector('h3 + div').innerHTML = `
     <p>@₦${el.price}</p>
