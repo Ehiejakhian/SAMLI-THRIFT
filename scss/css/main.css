@@ -205,6 +205,11 @@ header {
   left: 0;
   z-index: 10;
 }
+@media (max-width: 500px) {
+  header {
+    padding: 10px var(--side-padding);
+  }
+}
 header .header__content {
   color: var(--header-text);
   display: flex;
@@ -236,6 +241,13 @@ header .header__content #toggleLang {
 header .header__content #toggleLang:hover {
   background: rgba(204, 204, 204, 0.3);
 }
+@media (max-width: 500px) {
+  header .header__content #toggleLang {
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+  }
+}
 header .header__content .nav__menu__open {
   height: 50px;
   width: 50px;
@@ -251,7 +263,7 @@ header .header__content .nav__menu__open:hover {
 }
 header .header__content .nav__menu__open span {
   width: 25px;
-  height: 4px;
+  height: 3px;
   background: var(--header-text);
   border-radius: 5px;
 }

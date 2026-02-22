@@ -8,6 +8,9 @@ header {
   right: 0;
   left: 0;
   z-index: 10;
+  @media (max-width: $mini-tab) {
+    padding: 10px var(--side-padding);
+  }
 
   .header__content {
     color: var(--header-text);
@@ -34,6 +37,11 @@ header {
       &:hover {
         background: rgba(#ccc, .3);
       }
+      @media (max-width: $mini-tab) {
+        height: 40px;
+        width: 40px;
+        font-size: 24px;
+      }
     }
     .nav__menu {
       &__open {
@@ -46,7 +54,7 @@ header {
         }
         span {
           width: 25px;
-          height: 4px;
+          height: 3px;
           background: var(--header-text);
           border-radius: 5px;
         }
