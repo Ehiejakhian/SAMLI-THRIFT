@@ -4,6 +4,10 @@
   src: url("../../assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {
+  font-family: "bilbo swash caps";
+  src: url("../../assets/fonts/BilboSwashCaps-Regular.ttf") format("truetype");
+}
+@font-face {
   font-family: "smooch sans";
   src: url("../../assets/fonts/SmoochSans-VariableFont_wght.ttf") format("truetype");
 }
@@ -210,7 +214,9 @@ header .header__content {
   gap: 10px;
 }
 header .header__content h2 {
-  font-size: 1.5rem;
+  font-family: "bilbo swash caps";
+  font-weight: 400;
+  font-size: 2rem;
 }
 header .header__content .overlay, header .header__content .nav__checkbox {
   display: none;
