@@ -1,4 +1,4 @@
-console.log('Version 1.4.0');
+console.log('Version 1.8.0');
 let newTemp = document.querySelector('#new__item');
 let newContent = newTemp.content;
 let new__grid = document.querySelector('.new__grid');
