@@ -9,7 +9,10 @@
   position: relative;
   padding: 150px var(--side-padding);
   text-align: center;
-  @include df(center, center, column-reverse, 70px);
+  @include df(center, center, column, 70px);
+  @media (max-width: $mini-tab) {
+    padding: 70px var(--side-padding);
+  }
   
   @media  (min-width: $tablet) {
     text-align: left;

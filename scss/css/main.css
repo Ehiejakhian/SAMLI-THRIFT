@@ -5208,8 +5208,13 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column-reverse;
+  flex-flow: column;
   gap: 70px;
+}
+@media (max-width: 500px) {
+  .intro {
+    padding: 70px var(--side-padding);
+  }
 }
 @media (min-width: 768px) {
   .intro {
