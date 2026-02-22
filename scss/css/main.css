@@ -5213,7 +5213,12 @@ main .available-grid .wrapper .slot .slot-costs .get-slot:hover {
 }
 @media (max-width: 500px) {
   .intro {
-    padding: 70px var(--side-padding);
+    padding: 10px var(--side-padding) 50px var(--side-padding) !important;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-flow: column;
+    gap: 50px;
   }
 }
 @media (min-width: 768px) {
