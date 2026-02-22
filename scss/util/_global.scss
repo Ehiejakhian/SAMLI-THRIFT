@@ -38,17 +38,23 @@ main {
   &__content {
     @include df(normal, center, column, 10px);
     @for $i from 1 through 2 {
-      .row-#{$i} {
-        @include df(normal, normal, row, 10px);
+      .row-1 {
+        font-family: 'bilbo swash caps','brush script mt', 'lucida handwriting', 'comic sans ms';
+        @include df(center, center, row, 5px);
         span {
-          // border: 1px solid;
-          background: #fff;
-          width: 35px;
-          height: 35px;
-          border-radius: 5px;
-          font-weight: 700;
           text-transform: uppercase;
+          background: var(--bg);
+          border-radius: 5px;
+          width: 25px;
+          height: 25px;
+          transition: all .3s;
+          animation: loader__text 2s ease-in-out infinite;
           @include df(center, center);
+          @for $i from 1 through 6 {
+            &:nth-of-type(#{$i}) {
+              animation-delay: #{'.'}#{$i}s;
+            }
+          }
         }
       }
     }
@@ -70,11 +76,7 @@ main {
 }
 
 @keyframes loader__text {
-  0% {
-    right: auto;
-    left: 0%;
-  } 50% {
-    left: auto;
-    right: 0%;
-  }
+  0% {padding: 10px;}
+  50% {padding: 20px; }
+  100% {padding: 10px;}
 }
